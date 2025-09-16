@@ -1,0 +1,3484 @@
+fileFormatVersion: 2
+guid: b76dbda4ff9ed451cb54516c3334c71c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1529108051601286436
+    second: Dragon_Warrior_SpriteSheet_0
+  - first:
+      213: 6357756504200702945
+    second: Dragon_Warrior_SpriteSheet_1
+  - first:
+      213: 2702124654658736095
+    second: Dragon_Warrior_SpriteSheet_2
+  - first:
+      213: -4416291295663613557
+    second: Dragon_Warrior_SpriteSheet_3
+  - first:
+      213: -5070663120893370695
+    second: Dragon_Warrior_SpriteSheet_4
+  - first:
+      213: 5948125296620298824
+    second: Dragon_Warrior_SpriteSheet_5
+  - first:
+      213: -3627676904192959919
+    second: Dragon_Warrior_SpriteSheet_6
+  - first:
+      213: -1515785422048837658
+    second: Dragon_Warrior_SpriteSheet_7
+  - first:
+      213: 2470897017731094926
+    second: Dragon_Warrior_SpriteSheet_8
+  - first:
+      213: -2299610548817889231
+    second: Dragon_Warrior_SpriteSheet_9
+  - first:
+      213: -7438954101023092875
+    second: Dragon_Warrior_SpriteSheet_10
+  - first:
+      213: -5233574568449591333
+    second: Dragon_Warrior_SpriteSheet_11
+  - first:
+      213: 2813560579662043718
+    second: Dragon_Warrior_SpriteSheet_12
+  - first:
+      213: 3555439224754776638
+    second: Dragon_Warrior_SpriteSheet_13
+  - first:
+      213: 440161250831668213
+    second: Dragon_Warrior_SpriteSheet_14
+  - first:
+      213: 6840870814932041911
+    second: Dragon_Warrior_SpriteSheet_15
+  - first:
+      213: 3667929309701645523
+    second: Dragon_Warrior_SpriteSheet_16
+  - first:
+      213: -4529594651086558400
+    second: Dragon_Warrior_SpriteSheet_17
+  - first:
+      213: 2987678904804263960
+    second: Dragon_Warrior_SpriteSheet_18
+  - first:
+      213: -3699105953095964222
+    second: Dragon_Warrior_SpriteSheet_19
+  - first:
+      213: -1656841180610143447
+    second: Dragon_Warrior_SpriteSheet_20
+  - first:
+      213: 8471480233872333098
+    second: Dragon_Warrior_SpriteSheet_21
+  - first:
+      213: -1395641203867674723
+    second: Dragon_Warrior_SpriteSheet_22
+  - first:
+      213: -2853337912211206863
+    second: Dragon_Warrior_SpriteSheet_23
+  - first:
+      213: 561110069917833489
+    second: Dragon_Warrior_SpriteSheet_24
+  - first:
+      213: -3493671420366792858
+    second: Dragon_Warrior_SpriteSheet_25
+  - first:
+      213: -2317751104853943102
+    second: Dragon_Warrior_SpriteSheet_26
+  - first:
+      213: 2072463474303313696
+    second: Dragon_Warrior_SpriteSheet_27
+  - first:
+      213: -6052604256126266274
+    second: Dragon_Warrior_SpriteSheet_28
+  - first:
+      213: 9102367108244674688
+    second: Dragon_Warrior_SpriteSheet_29
+  - first:
+      213: 5566974277074740818
+    second: Dragon_Warrior_SpriteSheet_30
+  - first:
+      213: 2522231865134723782
+    second: Dragon_Warrior_SpriteSheet_31
+  - first:
+      213: -1546597123085473797
+    second: Dragon_Warrior_SpriteSheet_32
+  - first:
+      213: 6665736427134476487
+    second: Dragon_Warrior_SpriteSheet_33
+  - first:
+      213: 5808175228378150804
+    second: Dragon_Warrior_SpriteSheet_34
+  - first:
+      213: -5839006603068946660
+    second: Dragon_Warrior_SpriteSheet_35
+  - first:
+      213: -6062918618233580930
+    second: Dragon_Warrior_SpriteSheet_36
+  - first:
+      213: 7396957110210690383
+    second: Dragon_Warrior_SpriteSheet_37
+  - first:
+      213: -7074878567566727969
+    second: Dragon_Warrior_SpriteSheet_38
+  - first:
+      213: 2756488787555089832
+    second: Dragon_Warrior_SpriteSheet_39
+  - first:
+      213: -3756651652035361498
+    second: Dragon_Warrior_SpriteSheet_40
+  - first:
+      213: 3287188488362866428
+    second: Dragon_Warrior_SpriteSheet_41
+  - first:
+      213: -1039091670634452040
+    second: Dragon_Warrior_SpriteSheet_42
+  - first:
+      213: -7258010501761684493
+    second: Dragon_Warrior_SpriteSheet_43
+  - first:
+      213: -4059224579132274315
+    second: Dragon_Warrior_SpriteSheet_44
+  - first:
+      213: -1125726602818228450
+    second: Dragon_Warrior_SpriteSheet_45
+  - first:
+      213: 2560325709925357400
+    second: Dragon_Warrior_SpriteSheet_46
+  - first:
+      213: -4763538991516410598
+    second: Dragon_Warrior_SpriteSheet_47
+  - first:
+      213: -545665999021164724
+    second: Dragon_Warrior_SpriteSheet_48
+  - first:
+      213: -8738553338714870888
+    second: Dragon_Warrior_SpriteSheet_49
+  - first:
+      213: 4486784057386974225
+    second: Dragon_Warrior_SpriteSheet_50
+  - first:
+      213: -5920686567035670123
+    second: Dragon_Warrior_SpriteSheet_51
+  - first:
+      213: -4107374172896855682
+    second: Dragon_Warrior_SpriteSheet_52
+  - first:
+      213: -6983036512858904270
+    second: Dragon_Warrior_SpriteSheet_53
+  - first:
+      213: -3064718671371642642
+    second: Dragon_Warrior_SpriteSheet_54
+  - first:
+      213: 1324763189372348160
+    second: Dragon_Warrior_SpriteSheet_55
+  - first:
+      213: 7625880278278709993
+    second: Dragon_Warrior_SpriteSheet_56
+  - first:
+      213: -1212984287455432727
+    second: Dragon_Warrior_SpriteSheet_57
+  - first:
+      213: -8655276758839653878
+    second: Dragon_Warrior_SpriteSheet_58
+  - first:
+      213: 6590780888109151077
+    second: Dragon_Warrior_SpriteSheet_59
+  - first:
+      213: 876572033259900247
+    second: Dragon_Warrior_SpriteSheet_60
+  - first:
+      213: 7940105098991073495
+    second: Dragon_Warrior_SpriteSheet_61
+  - first:
+      213: 2793129659390596359
+    second: Dragon_Warrior_SpriteSheet_62
+  - first:
+      213: 2498213685794554604
+    second: Dragon_Warrior_SpriteSheet_63
+  - first:
+      213: -734628220491782541
+    second: Dragon_Warrior_SpriteSheet_64
+  - first:
+      213: 4709074656071157632
+    second: Dragon_Warrior_SpriteSheet_65
+  - first:
+      213: 3935910167621855830
+    second: Dragon_Warrior_SpriteSheet_66
+  - first:
+      213: -6374322468719452327
+    second: Dragon_Warrior_SpriteSheet_67
+  - first:
+      213: -7040248844760172196
+    second: Dragon_Warrior_SpriteSheet_68
+  - first:
+      213: -5676554313617219588
+    second: Dragon_Warrior_SpriteSheet_69
+  - first:
+      213: -5528282681020770997
+    second: Dragon_Warrior_SpriteSheet_70
+  - first:
+      213: 3834370246314347750
+    second: Dragon_Warrior_SpriteSheet_71
+  - first:
+      213: 2547141205129262994
+    second: Dragon_Warrior_SpriteSheet_72
+  - first:
+      213: 2133367057416307839
+    second: Dragon_Warrior_SpriteSheet_73
+  - first:
+      213: -5581102760846818257
+    second: Dragon_Warrior_SpriteSheet_74
+  - first:
+      213: 738048546872285931
+    second: Dragon_Warrior_SpriteSheet_75
+  - first:
+      213: -2462463294461806061
+    second: Dragon_Warrior_SpriteSheet_76
+  - first:
+      213: 8758467210049818096
+    second: Dragon_Warrior_SpriteSheet_77
+  - first:
+      213: -5808424191307632888
+    second: Dragon_Warrior_SpriteSheet_78
+  - first:
+      213: 7417302439960664370
+    second: Dragon_Warrior_SpriteSheet_79
+  - first:
+      213: 3952439247068667079
+    second: Dragon_Warrior_SpriteSheet_80
+  - first:
+      213: -281622988082502796
+    second: Dragon_Warrior_SpriteSheet_81
+  - first:
+      213: -1900201067422135780
+    second: Dragon_Warrior_SpriteSheet_82
+  - first:
+      213: 1518069612843322558
+    second: Dragon_Warrior_SpriteSheet_83
+  - first:
+      213: 543883945494323158
+    second: Dragon_Warrior_SpriteSheet_84
+  - first:
+      213: -2107925314890810066
+    second: Dragon_Warrior_SpriteSheet_85
+  - first:
+      213: -4098847744535691680
+    second: Dragon_Warrior_SpriteSheet_86
+  - first:
+      213: -3732800777499990117
+    second: Dragon_Warrior_SpriteSheet_87
+  - first:
+      213: 2543931785757519027
+    second: Dragon_Warrior_SpriteSheet_88
+  - first:
+      213: 2199420436964744337
+    second: Dragon_Warrior_SpriteSheet_89
+  - first:
+      213: 1300487186150099007
+    second: Dragon_Warrior_SpriteSheet_90
+  - first:
+      213: -8588232448996152571
+    second: Dragon_Warrior_SpriteSheet_91
+  - first:
+      213: -4454007608571401248
+    second: Dragon_Warrior_SpriteSheet_92
+  - first:
+      213: -1150730217497257036
+    second: Dragon_Warrior_SpriteSheet_93
+  - first:
+      213: -4189151558118835812
+    second: Dragon_Warrior_SpriteSheet_94
+  - first:
+      213: 7764889893348786358
+    second: Dragon_Warrior_SpriteSheet_95
+  - first:
+      213: 2931031948117136304
+    second: Dragon_Warrior_SpriteSheet_96
+  - first:
+      213: 6202263827412795756
+    second: Dragon_Warrior_SpriteSheet_97
+  - first:
+      213: -877493304207571724
+    second: Dragon_Warrior_SpriteSheet_98
+  - first:
+      213: -1059058227953304046
+    second: Dragon_Warrior_SpriteSheet_99
+  - first:
+      213: -2880493420506127230
+    second: Dragon_Warrior_SpriteSheet_100
+  - first:
+      213: -696601455345798744
+    second: Dragon_Warrior_SpriteSheet_101
+  - first:
+      213: 8326490425251948214
+    second: Dragon_Warrior_SpriteSheet_102
+  - first:
+      213: 8368203902319337410
+    second: Dragon_Warrior_SpriteSheet_103
+  - first:
+      213: -7313187823668225767
+    second: Dragon_Warrior_SpriteSheet_104
+  - first:
+      213: 6338247155625842410
+    second: Dragon_Warrior_SpriteSheet_105
+  - first:
+      213: -4085678728736541642
+    second: Dragon_Warrior_SpriteSheet_106
+  - first:
+      213: -2228120264599178576
+    second: Dragon_Warrior_SpriteSheet_107
+  - first:
+      213: -1533753278975177239
+    second: Dragon_Warrior_SpriteSheet_108
+  - first:
+      213: -6601364202701539974
+    second: Dragon_Warrior_SpriteSheet_109
+  - first:
+      213: -346835087889636091
+    second: Dragon_Warrior_SpriteSheet_110
+  - first:
+      213: -4903963468311152992
+    second: Dragon_Warrior_SpriteSheet_111
+  - first:
+      213: -3798793107761647045
+    second: Dragon_Warrior_SpriteSheet_112
+  - first:
+      213: -588722491859968222
+    second: Dragon_Warrior_SpriteSheet_113
+  - first:
+      213: 3378695828388906112
+    second: Dragon_Warrior_SpriteSheet_114
+  - first:
+      213: -8254751252543235696
+    second: Dragon_Warrior_SpriteSheet_115
+  - first:
+      213: -1821351486569854548
+    second: Dragon_Warrior_SpriteSheet_116
+  - first:
+      213: 8068708644838518753
+    second: Dragon_Warrior_SpriteSheet_117
+  - first:
+      213: -4210774822889554593
+    second: Dragon_Warrior_SpriteSheet_118
+  - first:
+      213: -7629678620024589510
+    second: Dragon_Warrior_SpriteSheet_119
+  - first:
+      213: -5848887952663507162
+    second: Dragon_Warrior_SpriteSheet_120
+  - first:
+      213: -4202217592878961411
+    second: Dragon_Warrior_SpriteSheet_121
+  - first:
+      213: 8785665307225373461
+    second: Dragon_Warrior_SpriteSheet_122
+  - first:
+      213: -8940260989183672860
+    second: Dragon_Warrior_SpriteSheet_123
+  - first:
+      213: 528771531675161351
+    second: Dragon_Warrior_SpriteSheet_124
+  - first:
+      213: -2439701620250083759
+    second: Dragon_Warrior_SpriteSheet_125
+  - first:
+      213: -4116344101486222557
+    second: Dragon_Warrior_SpriteSheet_126
+  - first:
+      213: 5735004164912114614
+    second: Dragon_Warrior_SpriteSheet_127
+  - first:
+      213: 6005072285028860975
+    second: Dragon_Warrior_SpriteSheet_128
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1966
+        width: 407
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42562eedbab783510800000000000000
+      internalID: 1529108051601286436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1911
+        width: 11
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebef411bd94b3850800000000000000
+      internalID: 6357756504200702945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1899
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf42c39e00ef7520800000000000000
+      internalID: 2702124654658736095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1934
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b891251177e26b2c0800000000000000
+      internalID: -4416291295663613557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1900
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be1a7fc1c261a9b0800000000000000
+      internalID: -5070663120893370695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1895
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8426198517cfb8250800000000000000
+      internalID: 5948125296620298824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1899
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a90bd6317e7adc0800000000000000
+      internalID: -3627676904192959919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1899
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef301b8039d6fae0800000000000000
+      internalID: -1515785422048837658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1911
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e891f6a0fb36a4220800000000000000
+      internalID: 2470897017731094926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1854
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138f7f3c3642610e0800000000000000
+      internalID: -2299610548817889231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1835
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f451c88a683c890800000000000000
+      internalID: -7438954101023092875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1833
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd73b0e98ab9e57b0800000000000000
+      internalID: -5233574568449591333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1831
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a5cc8b076cb0720800000000000000
+      internalID: 2813560579662043718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1831
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3aaffb2325775130800000000000000
+      internalID: 3555439224754776638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1831
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f396b75354cb1600800000000000000
+      internalID: 440161250831668213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1831
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b08c5ef2c7afee50800000000000000
+      internalID: 6840870814932041911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1793
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4a20e064a17e230800000000000000
+      internalID: 3667929309701645523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1776
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04be975e9a5a321c0800000000000000
+      internalID: -4529594651086558400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1802
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81849cf622e567920800000000000000
+      internalID: 2987678904804263960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1775
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9ae2ffbb22aacc0800000000000000
+      internalID: -3699105953095964222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1779
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b5e7c79b7b109e0800000000000000
+      internalID: -1656841180610143447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1780
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2914bd836eb09570800000000000000
+      internalID: 8471480233872333098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1779
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97919138bfa1ace0800000000000000
+      internalID: -1395641203867674723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1791
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d0f765948e668d0800000000000000
+      internalID: -2853337912211206863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1734
+        width: 55
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119d85db2a679c700800000000000000
+      internalID: 561110069917833489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1711
+        width: 54
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6675a1b7a5cf38fc0800000000000000
+      internalID: -3493671420366792858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1746
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc596d66a1b5dfd0800000000000000
+      internalID: -2317751104853943102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1712
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02722dbac8ed2cc10800000000000000
+      internalID: 2072463474303313696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1711
+        width: 87
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5493934f74d00ca0800000000000000
+      internalID: -6052604256126266274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1665
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0889f1698aa125e70800000000000000
+      internalID: 9102367108244674688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1655
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256e6c22c9dd14d40800000000000000
+      internalID: 5566974277074740818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1655
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2b68a9484c00320800000000000000
+      internalID: 2522231865134723782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1678
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf769db5c12698ae0800000000000000
+      internalID: -1546597123085473797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1684
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c06bb1c6f3718c50800000000000000
+      internalID: 6665736427134476487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1615
+        width: 59
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497f3b0e898ca9050800000000000000
+      internalID: 5808175228378150804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1591
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c174aee4e6ea7fea0800000000000000
+      internalID: -5839006603068946660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1591
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72d512b3af2cdba0800000000000000
+      internalID: -6062918618233580930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1591
+        width: 58
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d78ec0d4547a660800000000000000
+      internalID: 7396957110210690383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1591
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd429275d6bf0dd90800000000000000
+      internalID: -7074878567566727969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1528
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad7191a2f3014620800000000000000
+      internalID: 2756488787555089832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1511
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6254c8fd931bddbc0800000000000000
+      internalID: -3756651652035361498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1548
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf63f9e83807e9d20800000000000000
+      internalID: 3287188488362866428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1511
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb24c281a76491f0800000000000000
+      internalID: -1039091670634452040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1511
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fba07a37ed564b90800000000000000
+      internalID: -7258010501761684493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1515
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579494180ccbaa7c0800000000000000
+      internalID: -4059224579132274315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1515
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fefcc7e9d9060f0800000000000000
+      internalID: -1125726602818228450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1514
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85796610baa188320800000000000000
+      internalID: 2560325709925357400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1455
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d11f8868284edb0800000000000000
+      internalID: -4763538991516410598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1455
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47b55a3aa76d68f0800000000000000
+      internalID: -545665999021164724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1467
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ba81b890c6ab680800000000000000
+      internalID: -8738553338714870888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1471
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cbf640452444e30800000000000000
+      internalID: 4486784057386974225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1385
+        width: 46
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5917969bfee75dda0800000000000000
+      internalID: -5920686567035670123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1375
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e797ed893fcaff6c0800000000000000
+      internalID: -4107374172896855682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1400
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239667d0a45471f90800000000000000
+      internalID: -6983036512858904270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1375
+        width: 55
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8d2602b9ee775d0800000000000000
+      internalID: -3064718671371642642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1375
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0076d021a11826210800000000000000
+      internalID: 1324763189372348160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1401
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2a57e95b194d960800000000000000
+      internalID: 7625880278278709993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1320
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efa61c973d9a2fe0800000000000000
+      internalID: -1212984287455432727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1298
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a0bac35a742e780800000000000000
+      internalID: -8655276758839653878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1299
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563fd2c5c48277b50800000000000000
+      internalID: 6590780888109151077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1303
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d8f76be953a2c00800000000000000
+      internalID: 876572033259900247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1342
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d871a0e48be03e60800000000000000
+      internalID: 7940105098991073495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1303
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705959760a033c620800000000000000
+      internalID: 2793129659390596359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1303
+        width: 57
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2cdc27c107ba220800000000000000
+      internalID: 2498213685794554604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1298
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3762c9396831ec5f0800000000000000
+      internalID: -734628220491782541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1243
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0878aef237ef95140800000000000000
+      internalID: 4709074656071157632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1227
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ae2f0b1792f9630800000000000000
+      internalID: 3935910167621855830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1227
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f9f20cc7bd987a0800000000000000
+      internalID: -6374322468719452327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1155
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5937bdf9f20c4e90800000000000000
+      internalID: -7040248844760172196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1194
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff52ac6de3d831b0800000000000000
+      internalID: -5676554313617219588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1155
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4510d311389743b0800000000000000
+      internalID: -5528282681020770997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1167
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ecc4e47c6b663530800000000000000
+      internalID: 3834370246314347750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1187
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2977d744e63495320800000000000000
+      internalID: 2547141205129262994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1110
+        width: 48
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74c1d0290e3b9d10800000000000000
+      internalID: 2133367057416307839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1087
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2406c4eb90fb82b0800000000000000
+      internalID: -5581102760846818257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1086
+        width: 56
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bead0573e331e3a00800000000000000
+      internalID: 738048546872285931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1087
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a7a2d2ea293ddd0800000000000000
+      internalID: -2462463294461806061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1087
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd0defe5835c8970800000000000000
+      internalID: 8758467210049818096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1032
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fa25ce8f4546fa0800000000000000
+      internalID: -5808424191307632888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1015
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2395e75454d8fe660800000000000000
+      internalID: 7417302439960664370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1016
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc17d5ed82e9d630800000000000000
+      internalID: 3952439247068667079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 951
+        width: 62
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47322ca6269771cf0800000000000000
+      internalID: -281622988082502796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 939
+        width: 86
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a4c76623121a5e0800000000000000
+      internalID: -1900201067422135780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 939
+        width: 77
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc47d11544411510800000000000000
+      internalID: 1518069612843322558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 939
+        width: 72
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df1a3a11934c8700800000000000000
+      internalID: 543883945494323158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 895
+        width: 86
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d31e828152fb2e0800000000000000
+      internalID: -2107925314890810066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 823
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ef98661b7fd17c0800000000000000
+      internalID: -4098847744535691680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 815
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97afc7587d623cc0800000000000000
+      internalID: -3732800777499990117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 823
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bce6e61b7cdd4320800000000000000
+      internalID: 2543931785757519027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 799
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c94010c39e58e10800000000000000
+      internalID: 2199420436964744337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 727
+        width: 154
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f388c6d94324c0210800000000000000
+      internalID: 1300487186150099007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 746
+        width: 84
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50be91d071870d880800000000000000
+      internalID: -8588232448996152571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 754
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebe638adaf2032c0800000000000000
+      internalID: -4454007608571401248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 779
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb94c9c6f8c700f0800000000000000
+      internalID: -1150730217497257036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 786
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c997d0c5ad42dd5c0800000000000000
+      internalID: -4189151558118835812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 767
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b04315c73e62cb60800000000000000
+      internalID: 7764889893348786358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 742
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3d7dc070e1da820800000000000000
+      internalID: 2931031948117136304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 751
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61c13c071ed21650800000000000000
+      internalID: 6202263827412795756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 744
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f48ced2d7482d3f0800000000000000
+      internalID: -877493304207571724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 726
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e736e17287d41f0800000000000000
+      internalID: -1059058227953304046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 728
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284e1ecde7e6608d0800000000000000
+      internalID: -2880493420506127230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 683
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1f718caac2556f0800000000000000
+      internalID: -696601455345798744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 683
+        width: 54
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b665d61de2ad8370800000000000000
+      internalID: 8326490425251948214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 634
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf18cdcc15d12470800000000000000
+      internalID: 8368203902319337410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 634
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9191b8adb66528a90800000000000000
+      internalID: -7313187823668225767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 639
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae655b1e43af5f750800000000000000
+      internalID: 6338247155625842410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 634
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634f943d7d0cc47c0800000000000000
+      internalID: -4085678728736541642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 637
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b277b7ac602411e0800000000000000
+      internalID: -2228120264599178576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 560
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed0899d48307bae0800000000000000
+      internalID: -1533753278975177239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 558
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75bef0bb3e3364a0800000000000000
+      internalID: -6601364202701539974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 565
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50562be335bcf2bf0800000000000000
+      internalID: -346835087889636091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 559
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a632d7353f91fbb0800000000000000
+      internalID: -4903963468311152992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 570
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b323aac9bc9f74bc0800000000000000
+      internalID: -3798793107761647045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 503
+        width: 47
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f5769430074d7f0800000000000000
+      internalID: -588722491859968222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 455
+        width: 59
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084073f64f983ee20800000000000000
+      internalID: 3378695828388906112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 461
+        width: 62
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09913faa87b317d80800000000000000
+      internalID: -8254751252543235696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 467
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9cfdf097249b6e0800000000000000
+      internalID: -1821351486569854548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 463
+        width: 52
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef29bb33cfc9ff60800000000000000
+      internalID: 8068708644838518753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 399
+        width: 79
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d7284bb925095c0800000000000000
+      internalID: -4210774822889554593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 399
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33ba0708bfed1690800000000000000
+      internalID: -7629678620024589510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 298
+        width: 121
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f0e62556394dea0800000000000000
+      internalID: -5848887952663507162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 235
+        width: 169
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc6d831d59bea5c0800000000000000
+      internalID: -4202217592878961411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 207
+        width: 123
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b34a86c04fce970800000000000000
+      internalID: 8785665307225373461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 139
+        width: 54
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4edbc647fffcde380800000000000000
+      internalID: -8940260989183672860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 138
+        width: 58
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70356d018e2965700800000000000000
+      internalID: 528771531675161351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 151
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e7c0f6d40742ed0800000000000000
+      internalID: -2439701620250083759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 106
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323a3a959decfd6c0800000000000000
+      internalID: -4116344101486222557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 47
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbe8f217e3d69f40800000000000000
+      internalID: 5735004164912114614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_Warrior_SpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 47
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2440bf4d6d465350800000000000000
+      internalID: 6005072285028860975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dragon_Warrior_SpriteSheet_0: 1529108051601286436
+      Dragon_Warrior_SpriteSheet_1: 6357756504200702945
+      Dragon_Warrior_SpriteSheet_10: -7438954101023092875
+      Dragon_Warrior_SpriteSheet_100: -2880493420506127230
+      Dragon_Warrior_SpriteSheet_101: -696601455345798744
+      Dragon_Warrior_SpriteSheet_102: 8326490425251948214
+      Dragon_Warrior_SpriteSheet_103: 8368203902319337410
+      Dragon_Warrior_SpriteSheet_104: -7313187823668225767
+      Dragon_Warrior_SpriteSheet_105: 6338247155625842410
+      Dragon_Warrior_SpriteSheet_106: -4085678728736541642
+      Dragon_Warrior_SpriteSheet_107: -2228120264599178576
+      Dragon_Warrior_SpriteSheet_108: -1533753278975177239
+      Dragon_Warrior_SpriteSheet_109: -6601364202701539974
+      Dragon_Warrior_SpriteSheet_11: -5233574568449591333
+      Dragon_Warrior_SpriteSheet_110: -346835087889636091
+      Dragon_Warrior_SpriteSheet_111: -4903963468311152992
+      Dragon_Warrior_SpriteSheet_112: -3798793107761647045
+      Dragon_Warrior_SpriteSheet_113: -588722491859968222
+      Dragon_Warrior_SpriteSheet_114: 3378695828388906112
+      Dragon_Warrior_SpriteSheet_115: -8254751252543235696
+      Dragon_Warrior_SpriteSheet_116: -1821351486569854548
+      Dragon_Warrior_SpriteSheet_117: 8068708644838518753
+      Dragon_Warrior_SpriteSheet_118: -4210774822889554593
+      Dragon_Warrior_SpriteSheet_119: -7629678620024589510
+      Dragon_Warrior_SpriteSheet_12: 2813560579662043718
+      Dragon_Warrior_SpriteSheet_120: -5848887952663507162
+      Dragon_Warrior_SpriteSheet_121: -4202217592878961411
+      Dragon_Warrior_SpriteSheet_122: 8785665307225373461
+      Dragon_Warrior_SpriteSheet_123: -8940260989183672860
+      Dragon_Warrior_SpriteSheet_124: 528771531675161351
+      Dragon_Warrior_SpriteSheet_125: -2439701620250083759
+      Dragon_Warrior_SpriteSheet_126: -4116344101486222557
+      Dragon_Warrior_SpriteSheet_127: 5735004164912114614
+      Dragon_Warrior_SpriteSheet_128: 6005072285028860975
+      Dragon_Warrior_SpriteSheet_13: 3555439224754776638
+      Dragon_Warrior_SpriteSheet_14: 440161250831668213
+      Dragon_Warrior_SpriteSheet_15: 6840870814932041911
+      Dragon_Warrior_SpriteSheet_16: 3667929309701645523
+      Dragon_Warrior_SpriteSheet_17: -4529594651086558400
+      Dragon_Warrior_SpriteSheet_18: 2987678904804263960
+      Dragon_Warrior_SpriteSheet_19: -3699105953095964222
+      Dragon_Warrior_SpriteSheet_2: 2702124654658736095
+      Dragon_Warrior_SpriteSheet_20: -1656841180610143447
+      Dragon_Warrior_SpriteSheet_21: 8471480233872333098
+      Dragon_Warrior_SpriteSheet_22: -1395641203867674723
+      Dragon_Warrior_SpriteSheet_23: -2853337912211206863
+      Dragon_Warrior_SpriteSheet_24: 561110069917833489
+      Dragon_Warrior_SpriteSheet_25: -3493671420366792858
+      Dragon_Warrior_SpriteSheet_26: -2317751104853943102
+      Dragon_Warrior_SpriteSheet_27: 2072463474303313696
+      Dragon_Warrior_SpriteSheet_28: -6052604256126266274
+      Dragon_Warrior_SpriteSheet_29: 9102367108244674688
+      Dragon_Warrior_SpriteSheet_3: -4416291295663613557
+      Dragon_Warrior_SpriteSheet_30: 5566974277074740818
+      Dragon_Warrior_SpriteSheet_31: 2522231865134723782
+      Dragon_Warrior_SpriteSheet_32: -1546597123085473797
+      Dragon_Warrior_SpriteSheet_33: 6665736427134476487
+      Dragon_Warrior_SpriteSheet_34: 5808175228378150804
+      Dragon_Warrior_SpriteSheet_35: -5839006603068946660
+      Dragon_Warrior_SpriteSheet_36: -6062918618233580930
+      Dragon_Warrior_SpriteSheet_37: 7396957110210690383
+      Dragon_Warrior_SpriteSheet_38: -7074878567566727969
+      Dragon_Warrior_SpriteSheet_39: 2756488787555089832
+      Dragon_Warrior_SpriteSheet_4: -5070663120893370695
+      Dragon_Warrior_SpriteSheet_40: -3756651652035361498
+      Dragon_Warrior_SpriteSheet_41: 3287188488362866428
+      Dragon_Warrior_SpriteSheet_42: -1039091670634452040
+      Dragon_Warrior_SpriteSheet_43: -7258010501761684493
+      Dragon_Warrior_SpriteSheet_44: -4059224579132274315
+      Dragon_Warrior_SpriteSheet_45: -1125726602818228450
+      Dragon_Warrior_SpriteSheet_46: 2560325709925357400
+      Dragon_Warrior_SpriteSheet_47: -4763538991516410598
+      Dragon_Warrior_SpriteSheet_48: -545665999021164724
+      Dragon_Warrior_SpriteSheet_49: -8738553338714870888
+      Dragon_Warrior_SpriteSheet_5: 5948125296620298824
+      Dragon_Warrior_SpriteSheet_50: 4486784057386974225
+      Dragon_Warrior_SpriteSheet_51: -5920686567035670123
+      Dragon_Warrior_SpriteSheet_52: -4107374172896855682
+      Dragon_Warrior_SpriteSheet_53: -6983036512858904270
+      Dragon_Warrior_SpriteSheet_54: -3064718671371642642
+      Dragon_Warrior_SpriteSheet_55: 1324763189372348160
+      Dragon_Warrior_SpriteSheet_56: 7625880278278709993
+      Dragon_Warrior_SpriteSheet_57: -1212984287455432727
+      Dragon_Warrior_SpriteSheet_58: -8655276758839653878
+      Dragon_Warrior_SpriteSheet_59: 6590780888109151077
+      Dragon_Warrior_SpriteSheet_6: -3627676904192959919
+      Dragon_Warrior_SpriteSheet_60: 876572033259900247
+      Dragon_Warrior_SpriteSheet_61: 7940105098991073495
+      Dragon_Warrior_SpriteSheet_62: 2793129659390596359
+      Dragon_Warrior_SpriteSheet_63: 2498213685794554604
+      Dragon_Warrior_SpriteSheet_64: -734628220491782541
+      Dragon_Warrior_SpriteSheet_65: 4709074656071157632
+      Dragon_Warrior_SpriteSheet_66: 3935910167621855830
+      Dragon_Warrior_SpriteSheet_67: -6374322468719452327
+      Dragon_Warrior_SpriteSheet_68: -7040248844760172196
+      Dragon_Warrior_SpriteSheet_69: -5676554313617219588
+      Dragon_Warrior_SpriteSheet_7: -1515785422048837658
+      Dragon_Warrior_SpriteSheet_70: -5528282681020770997
+      Dragon_Warrior_SpriteSheet_71: 3834370246314347750
+      Dragon_Warrior_SpriteSheet_72: 2547141205129262994
+      Dragon_Warrior_SpriteSheet_73: 2133367057416307839
+      Dragon_Warrior_SpriteSheet_74: -5581102760846818257
+      Dragon_Warrior_SpriteSheet_75: 738048546872285931
+      Dragon_Warrior_SpriteSheet_76: -2462463294461806061
+      Dragon_Warrior_SpriteSheet_77: 8758467210049818096
+      Dragon_Warrior_SpriteSheet_78: -5808424191307632888
+      Dragon_Warrior_SpriteSheet_79: 7417302439960664370
+      Dragon_Warrior_SpriteSheet_8: 2470897017731094926
+      Dragon_Warrior_SpriteSheet_80: 3952439247068667079
+      Dragon_Warrior_SpriteSheet_81: -281622988082502796
+      Dragon_Warrior_SpriteSheet_82: -1900201067422135780
+      Dragon_Warrior_SpriteSheet_83: 1518069612843322558
+      Dragon_Warrior_SpriteSheet_84: 543883945494323158
+      Dragon_Warrior_SpriteSheet_85: -2107925314890810066
+      Dragon_Warrior_SpriteSheet_86: -4098847744535691680
+      Dragon_Warrior_SpriteSheet_87: -3732800777499990117
+      Dragon_Warrior_SpriteSheet_88: 2543931785757519027
+      Dragon_Warrior_SpriteSheet_89: 2199420436964744337
+      Dragon_Warrior_SpriteSheet_9: -2299610548817889231
+      Dragon_Warrior_SpriteSheet_90: 1300487186150099007
+      Dragon_Warrior_SpriteSheet_91: -8588232448996152571
+      Dragon_Warrior_SpriteSheet_92: -4454007608571401248
+      Dragon_Warrior_SpriteSheet_93: -1150730217497257036
+      Dragon_Warrior_SpriteSheet_94: -4189151558118835812
+      Dragon_Warrior_SpriteSheet_95: 7764889893348786358
+      Dragon_Warrior_SpriteSheet_96: 2931031948117136304
+      Dragon_Warrior_SpriteSheet_97: 6202263827412795756
+      Dragon_Warrior_SpriteSheet_98: -877493304207571724
+      Dragon_Warrior_SpriteSheet_99: -1059058227953304046
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
