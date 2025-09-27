@@ -39,7 +39,5 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // Update animator parameters
-        animator.SetFloat("idle", Mathf.Abs(rb.linearVelocity.x));
-        animator.SetBool("run", Mathf.Abs(rb.linearVelocity.x) > 0.001f);
     }
 }

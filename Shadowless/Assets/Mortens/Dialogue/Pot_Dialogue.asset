@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5669a439ba1734ca3eb78af3278e54, type: 3}
+  m_Name: Pot_Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  entrys:
+  - Name: Riddle
+    lines:
+    - 'I fashion warmth from humble things,
+
+      But i am picky with the rings.
+
+      Bring
+      me the right parts, one by one-
+
+      or i will cough and spit and run.'
+  - Name: Riddle Hints
+    lines:
+    - First I wake without a sound, where tiny hungry heads are found.
+    - Sweet but small - i call to life; i feed the spark, then step aside.
+    - White as cloud, i build and bind; a bakers body, firm and kind.
+    - A pinch of bite keeps things in tune- too early could mar the tune.
