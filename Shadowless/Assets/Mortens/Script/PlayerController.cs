@@ -1,0 +1,110 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerController2D : MonoBehaviour
+{
+    [Header("Parameters")]
+    public float jumpForce = 10f;
+    public float moveSpeed = 5f;
+
+    [Header("Components")]
+    public Rigidbody2D rb;
+    public GameObject groundCheck;
+    public LayerMask groundLayer;
+    public Animator animator;
+
+    private bool isGrounded;
+    private float horizontalMovement;
+    private float groundCheckRadius = 0.3f;
+    private bool jump;
+    private bool facingRight = true;
+    private IInteractable interactable;
+
+    void Start()
+    {
+
+    }
+
+    void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundLayer);
+
+        // Handle horizontal player movement
+        float currentSpeed = isGrounded ? moveSpeed : moveSpeed * 0.7f;
+        Vector2 movement = new Vector2(horizontalMovement * currentSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = movement;
+
+        // Set running animation
+        animator.SetBool("isRunning", isGrounded && horizontalMovement != 0);
+
+        // Set falling animation
+        animator.SetBool("isFalling", rb.linearVelocityY < 0 && !isGrounded);
+
+        // Set Jumping animation
+        animator.SetBool("isJumping", rb.linearVelocityY > 0 && !isGrounded);
+
+        if (jump && isGrounded)
+        {
+            rb.AddForceY(jumpForce, ForceMode2D.Impulse);
+            jump = false;
+        }
+
+        // Handle character flipping
+        if (facingRight && horizontalMovement < 0)
+            Flip();
+        else if (!facingRight && horizontalMovement > 0)
+            Flip();
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        jump = true;
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        float yRotation = facingRight ? 0f : 180f;
+        transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
+    }
+
+    void OnDrawGizmos()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.transform.position, groundCheckRadius);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            interactable = collision.GetComponent<IInteractable>();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Interactable"))
+        {
+            interactable = null;
+        }
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        if (interactable != null)
+        {
+            interactable.Interact();
+        }
+    }
+}
