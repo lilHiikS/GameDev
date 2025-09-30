@@ -91,7 +91,5 @@ public class Grabbing : MonoBehaviour
 
         if (grabbedRb != null)
             grabbedRb.MovePosition(lerpedPos);
-        else
-            grabbedObject.position = new Vector3(lerpedPos.x, lerpedPos.y, grabbedObject.position.z);
     }
 }

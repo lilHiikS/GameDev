@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class ScalePuzzle : MonoBehaviour
 {
     public Transform bar, leftHandle, rightHandle;
-    public Collider2D leftTrigger;
     public float rotationSpeed = 2f;
     public float maxAngle = 30f;
     public float rightWeight = 20f;
@@ -52,6 +51,7 @@ public class ScalePuzzle : MonoBehaviour
 
     public void RemoveLeftObject(Rigidbody2D rb)
     {
-        leftObjects.Remove(rb);
+        if (leftObjects.Contains(rb))
+            leftObjects.Remove(rb);
     }
 }

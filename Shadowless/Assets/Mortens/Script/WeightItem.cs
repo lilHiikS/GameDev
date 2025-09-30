@@ -2,68 +2,72 @@ using UnityEngine;
 
 public class WeightItem : MonoBehaviour
 {
-    public bool isGrounded = false;
     public ScalePuzzle scalePuzzle;
+    public bool isGrounded = false;
+    public LayerMask supportMask;
 
-    private Transform startParent;
-    private bool isQuitting = false;
+    private Rigidbody2D rb;
+    private float checkTimer = 0f;
+    private float checkInterval = 0.1f;
 
     void Start()
     {
-        startParent = transform.parent;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnApplicationQuit()
+    void FixedUpdate()
     {
-        isQuitting = true;
-    }
+        checkTimer -= Time.fixedDeltaTime;
+        if (checkTimer > 0f || rb.IsSleeping()) return;
 
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Plate"))
+        var col = GetComponent<Collider2D>();
+        Vector2 origin = new Vector2(col.bounds.center.x, col.bounds.min.y + 0.01f);
+        float radius = col.bounds.extents.x * 0.9f;
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(origin, radius, supportMask);
+
+        bool wasGrounded = isGrounded;
+        isGrounded = false;
+
+        foreach (var hit in hits)
         {
-            SetGrounded(true);
-        }
-        else if (collider.CompareTag("Weight"))
-        {
-            var otherWeight = collider.GetComponent<WeightItem>();
-            if (otherWeight != null && otherWeight.isGrounded)
+            if (hit == col) continue; // Ignore self
+            if (hit.CompareTag("Plate"))
             {
-                SetGrounded(true);
+                isGrounded = true;
+                break;
+            }
+            else if (hit.CompareTag("Weight"))
+            {
+                var otherWeight = hit.GetComponent<WeightItem>();
+                if (otherWeight != null && otherWeight.isGrounded)
+                {
+                    isGrounded = true;
+                    break;
+                }
             }
         }
-    }
 
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        SetGrounded(false);
-    }
-
-    void SetGrounded(bool grounded)
-    {
-        if (isQuitting) return;
-
-        if (isGrounded != grounded)
+        if (wasGrounded != isGrounded)
         {
-            isGrounded = grounded;
             if (isGrounded)
-            {
-                if (scalePuzzle.leftHandle.gameObject.activeInHierarchy)
-                    transform.SetParent(scalePuzzle.leftHandle);
-            }
+                scalePuzzle.AddLeftObject(GetComponent<Rigidbody2D>());
             else
-            {
-                if (startParent.gameObject.activeInHierarchy)
-                    transform.SetParent(startParent);
-            }
+                scalePuzzle.RemoveLeftObject(GetComponent<Rigidbody2D>());
+        }
 
-            if (scalePuzzle != null)
-            {
-                if (isGrounded)
-                    scalePuzzle.AddLeftObject(GetComponent<Rigidbody2D>());
-                else
-                    scalePuzzle.RemoveLeftObject(GetComponent<Rigidbody2D>());
-            }
+        checkTimer = checkInterval;
+    }
+
+    void OnDrawGizmos()
+    {
+        var col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            Vector2 origin = new Vector2(col.bounds.center.x, col.bounds.min.y + 0.01f);
+            float radius = col.bounds.extents.x * 0.9f;
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(origin, radius);
         }
     }
 }
