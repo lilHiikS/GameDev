@@ -27,7 +27,7 @@ public class GorgonAI : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void Update() //her - måske fiks så den ik kører 60 gerne per sekund
     {
         switch (currentState)
         {
@@ -38,20 +38,19 @@ public class GorgonAI : MonoBehaviour
 
             case GorgonState.Chase:
                 ChasePlayer();
-                // if (PlayerInRange(attackRange))
-                //     currentState = GorgonState.Attack;
-                // else if (!PlayerInRange(detectionRange))
-                //     currentState = GorgonState.Chase;
+                if (PlayerInRange(attackRange))
+                    currentState = GorgonState.Attack;
+                else if (!PlayerInRange(detectionRange))
+                    currentState = GorgonState.Chase;
                 break;
 
-                // case GorgonState.Attack:
-                //     AttackPlayer();
-                //     if (!PlayerInRange(attackRange))
-                //         currentState = GorgonState.Chase;
-                //     break;
+            case GorgonState.Attack:
+                AttackPlayer();
+                if (!PlayerInRange(attackRange))
+                    currentState = GorgonState.Chase;
+                break;
         }
     }
-
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -62,13 +61,11 @@ public class GorgonAI : MonoBehaviour
         }
     }
 
-    // === IDLE ===
     void Idle()
     {
         animator.SetBool("isIdle", true);
     }
 
-    // === CHASE PLAYER ===
     void ChasePlayer()
     {
         if (player == null)
@@ -88,15 +85,12 @@ public class GorgonAI : MonoBehaviour
         }
     }
 
-    // // === ATTACK PLAYER ===
-    // void AttackPlayer()
-    // {
-    //     animator.SetBool("isAttacking", true);
-    //     Debug.Log("Gorgon attacks!");
-    //     // Here you can trigger an animation or reduce the player's health
-    // }
+    void AttackPlayer()
+    {
+        animator.SetTrigger("attack");
+        Debug.Log("Gorgon attacks!");
+    }
 
-    // === HELPERS ===
     bool PlayerInRange(float range)
     {
         var inRange = player != null && Vector2.Distance(transform.position, player.position) <= range;
