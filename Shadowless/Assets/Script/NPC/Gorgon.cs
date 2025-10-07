@@ -1,0 +1,118 @@
+using UnityEngine;
+
+public class GorgonAI : MonoBehaviour
+{
+    public float speed = 2f;
+    public float detectionRange = 20f;
+    public float attackRange = 1f;
+    public Transform pointA;
+    public Transform pointB;
+    public Transform player;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+
+    private Vector3 targetPoint;
+
+    [SerializeField]
+    private GorgonState currentState = GorgonState.Idle;
+
+    private enum GorgonState { Idle, Chase, Attack }
+
+    [SerializeField]
+    private Animator animator;
+
+    void Start()
+    {
+        targetPoint = pointA.position;
+        animator = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        switch (currentState)
+        {
+            case GorgonState.Idle:
+                if (PlayerInRange(detectionRange))
+                    currentState = GorgonState.Chase;
+                break;
+
+            case GorgonState.Chase:
+                ChasePlayer();
+                // if (PlayerInRange(attackRange))
+                //     currentState = GorgonState.Attack;
+                // else if (!PlayerInRange(detectionRange))
+                //     currentState = GorgonState.Chase;
+                break;
+
+                // case GorgonState.Attack:
+                //     AttackPlayer();
+                //     if (!PlayerInRange(attackRange))
+                //         currentState = GorgonState.Chase;
+                //     break;
+        }
+    }
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player = collision.transform;
+            currentState = GorgonState.Chase;
+        }
+    }
+
+    // === IDLE ===
+    void Idle()
+    {
+        animator.SetBool("isIdle", true);
+    }
+
+    // === CHASE PLAYER ===
+    void ChasePlayer()
+    {
+        if (player == null)
+            return;
+
+        animator.SetBool("isWalking", true);
+
+        Debug.Log("Gorgon is chasing the player!");
+
+        var newPosition = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        transform.position = new Vector2(newPosition.x, transform.position.y);
+
+        if ((player.position.x < transform.position.x && transform.localScale.x > 0) ||
+            (player.position.x > transform.position.x && transform.localScale.x < 0))
+        {
+            Flip();
+        }
+    }
+
+    // // === ATTACK PLAYER ===
+    // void AttackPlayer()
+    // {
+    //     animator.SetBool("isAttacking", true);
+    //     Debug.Log("Gorgon attacks!");
+    //     // Here you can trigger an animation or reduce the player's health
+    // }
+
+    // === HELPERS ===
+    bool PlayerInRange(float range)
+    {
+        var inRange = player != null && Vector2.Distance(transform.position, player.position) <= range;
+        Debug.Log($"PlayerInRange({range}): {inRange}");
+        return inRange;
+    }
+
+    bool IsGroundAhead()
+    {
+        return Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayer);
+    }
+
+    void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+}

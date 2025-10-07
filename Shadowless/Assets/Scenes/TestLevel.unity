@@ -434,74 +434,6 @@ Transform:
   - {fileID: 1274960826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &173300776
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4388403486254342901, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_Radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4388403486254342901, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_Name
-      value: Gorgon
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 992132944}
-  m_SourcePrefab: {fileID: 100100000, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
 --- !u!1001 &231253026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7464,38 +7396,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &992132938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
-  m_PrefabInstance: {fileID: 173300776}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &992132944
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992132938}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &995153541
 GameObject:
   m_ObjectHideFlags: 0
@@ -36858,4 +36758,3 @@ SceneRoots:
   - {fileID: 161887697}
   - {fileID: 922403047}
   - {fileID: 335130386}
-  - {fileID: 173300776}
