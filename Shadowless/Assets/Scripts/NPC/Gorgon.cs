@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class GorgonAI : MonoBehaviour
 {
-    // === General Settings ===
+    public float y;
     public float speed = 2f;
     public float detectionRange = 20f;
-    public float attackRange = 1f;
+    public float attackRange = 0.5f;
     public Transform pointA;
     public Transform pointB;
     public Transform player;
@@ -15,20 +15,22 @@ public class GorgonAI : MonoBehaviour
     private Vector3 targetPoint;
     private GorgonState currentState = GorgonState.Chase;
 
-    private enum GorgonState { Idle, Patrol, Chase, Attack }
-    private Animator animator;
+    private enum GorgonState { Idle, Walk, Chase, Attack }
+    public Animator animator;
 
     void Start()
     {
         targetPoint = pointA.position;
         animator = GetComponent<Animator>();
+        y = transform.position.y;
+
     }
 
     void Update()
     {
         switch (currentState)
         {
-            case GorgonState.Patrol:
+            case GorgonState.Walk:
                 Patrol();
                 if (PlayerInRange(detectionRange))
                     currentState = GorgonState.Chase;
@@ -36,17 +38,15 @@ public class GorgonAI : MonoBehaviour
 
             case GorgonState.Chase:
                 ChasePlayer();
-                // if (PlayerInRange(attackRange))
-                //     currentState = GorgonState.Attack;
-                // else if (!PlayerInRange(detectionRange))
-                //     currentState = GorgonState.Patrol;
+                if (PlayerInRange(attackRange))
+                    currentState = GorgonState.Attack;
                 break;
 
-            // case GorgonState.Attack:
-            //     AttackPlayer();
-            //     if (!PlayerInRange(attackRange))
-            //         currentState = GorgonState.Chase;
-            //     break;
+            case GorgonState.Attack:
+                AttackPlayer();
+                if (!PlayerInRange(attackRange))
+                    currentState = GorgonState.Chase;
+                break;
 
             case GorgonState.Idle:
                 // Could add idle behavior (waiting, animation, etc.)
@@ -64,13 +64,15 @@ public class GorgonAI : MonoBehaviour
         }
     }
 
-    // === IDLE ===
-    void Idle()
+    void OnTriggerExit2D(Collider2D collision)
     {
-        animator.SetBool("isIdle", true);
+        if (collision.CompareTag("Player"))
+        {
+            player = null;
+            currentState = GorgonState.Walk;
+        }
     }
 
-    // === PATROL ===
     void Patrol()
     {
         animator.SetBool("isWalking", true);
@@ -91,13 +93,16 @@ public class GorgonAI : MonoBehaviour
         }
     }
 
-    // === CHASE PLAYER ===
     void ChasePlayer()
     {
-        // animator.SetBool("isWalking", true);
         if (player != null)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            // transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            // transform.position = new Vector2(transform.position.x, transform.position.y); //her - kig
+
+            Vector2 targetPosition = new Vector2(player.position.x, y);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
 
             if ((player.position.x < transform.position.x && transform.localScale.x > 0) ||
                 (player.position.x > transform.position.x && transform.localScale.x < 0))
@@ -107,15 +112,13 @@ public class GorgonAI : MonoBehaviour
         }
     }
 
-    // // === ATTACK PLAYER ===
-    // void AttackPlayer()
-    // {
-    //     animator.SetBool("isAttacking", true);
-    //     Debug.Log("Gorgon attacks!");
-    //     // Here you can trigger an animation or reduce the player's health
-    // }
+    void AttackPlayer()
+    {
+        animator.SetTrigger("attack");
+        Debug.Log("Gorgon attacks!");
+        // Here you can trigger an animation or reduce the player's health
+    }
 
-    // === HELPERS ===
     bool PlayerInRange(float range)
     {
         return player != null && Vector2.Distance(transform.position, player.position) <= range;
