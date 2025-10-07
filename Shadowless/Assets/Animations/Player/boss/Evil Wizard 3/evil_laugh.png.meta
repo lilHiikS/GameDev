@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 801ce28419ea84d8baba9ddbe0156dc8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7523326328504946783
+    second: evil_laugh_0
+  - first:
+      213: 4562486914855817696
+    second: evil_laugh_1
+  - first:
+      213: -7114584383889855256
+    second: evil_laugh_2
+  - first:
+      213: -3006092931805510927
+    second: evil_laugh_3
+  - first:
+      213: 5779811169033343798
+    second: evil_laugh_4
+  - first:
+      213: 5118531372992885543
+    second: evil_laugh_5
+  - first:
+      213: 1848965797595476437
+    second: evil_laugh_6
+  - first:
+      213: -3401581379750296743
+    second: evil_laugh_7
+  - first:
+      213: -8274385624252566789
+    second: evil_laugh_8
+  - first:
+      213: -2737029354841197953
+    second: evil_laugh_9
+  - first:
+      213: 36296565904893588
+    second: evil_laugh_10
+  - first:
+      213: -479468654506641606
+    second: evil_laugh_11
+  - first:
+      213: -7040272940206965240
+    second: evil_laugh_12
+  - first:
+      213: -7573663802020361241
+    second: evil_laugh_13
+  - first:
+      213: 6516711205433608522
+    second: evil_laugh_14
+  - first:
+      213: 1424361843337261195
+    second: evil_laugh_15
+  - first:
+      213: 5249964884239475906
+    second: evil_laugh_16
+  - first:
+      213: -5946504432834131523
+    second: evil_laugh_17
+  - first:
+      213: -4512543325579265964
+    second: evil_laugh_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: evil_laugh_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 991
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5091eb7f69386860800000000000000
+      internalID: 7523326328504946783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_1
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1002
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1595c0da5315f30800000000000000
+      internalID: 4562486914855817696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 897
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec24b1923be34d90800000000000000
+      internalID: -7114584383889855256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 679
+        width: 277
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f28bedc7663846d0800000000000000
+      internalID: -3006092931805510927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_4
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 679
+        width: 278
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633511fa2a3063050800000000000000
+      internalID: 5779811169033343798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_5
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 680
+        width: 278
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723fee22a2da80740800000000000000
+      internalID: 5118531372992885543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 846
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1768fb898d8a910800000000000000
+      internalID: 1848965797595476437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_7
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 865
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9538669e1c72bc0d0800000000000000
+      internalID: -3401581379750296743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 340
+        width: 277
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2b3d34d1a7b2d80800000000000000
+      internalID: -8274385624252566789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 639
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72bfdc9d4e140ad0800000000000000
+      internalID: -2737029354841197953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_10
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 341
+        width: 276
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496e35dc883f08000800000000000000
+      internalID: 36296565904893588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_11
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 341
+        width: 276
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37723f8cc59859f0800000000000000
+      internalID: -479468654506641606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_12
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 9
+        width: 277
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e3b25df0deb4e90800000000000000
+      internalID: -7040272940206965240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_13
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 10
+        width: 276
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb875826e0f4e690800000000000000
+      internalID: -7573663802020361241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_14
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 323
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a498da77052007a50800000000000000
+      internalID: 6516711205433608522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_15
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 199
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80fcb7cc8954c310800000000000000
+      internalID: 1424361843337261195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_16
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 9
+        width: 277
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c46e582f3f9bd840800000000000000
+      internalID: 5249964884239475906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_17
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 179
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9c2a969b5c97da0800000000000000
+      internalID: -5946504432834131523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evil_laugh_18
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 166
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458b94df0c93061c0800000000000000
+      internalID: -4512543325579265964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      evil_laugh_0: 7523326328504946783
+      evil_laugh_1: 4562486914855817696
+      evil_laugh_10: 36296565904893588
+      evil_laugh_11: -479468654506641606
+      evil_laugh_12: -7040272940206965240
+      evil_laugh_13: -7573663802020361241
+      evil_laugh_14: 6516711205433608522
+      evil_laugh_15: 1424361843337261195
+      evil_laugh_16: 5249964884239475906
+      evil_laugh_17: -5946504432834131523
+      evil_laugh_18: -4512543325579265964
+      evil_laugh_2: -7114584383889855256
+      evil_laugh_3: -3006092931805510927
+      evil_laugh_4: 5779811169033343798
+      evil_laugh_5: 5118531372992885543
+      evil_laugh_6: 1848965797595476437
+      evil_laugh_7: -3401581379750296743
+      evil_laugh_8: -8274385624252566789
+      evil_laugh_9: -2737029354841197953
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
