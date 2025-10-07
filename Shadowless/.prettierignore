@@ -1,0 +1,54 @@
+# Unity folders
+Library/
+Temp/
+Obj/
+obj/
+Build/
+build/
+Logs/
+UserSettings/
+ProjectSettings/
+
+# Unity assets (YAML handled by editor settings, but skip by default for Prettier CLI)
+**/*.asset
+**/*.meta
+**/*.prefab
+**/*.unity
+
+# Binaries and images
+**/*.dll
+**/*.exe
+**/*.pdf
+**/*.mid
+**/*.midi
+**/*.wav
+**/*.gif
+**/*.ico
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.psd
+**/*.tga
+**/*.tif
+**/*.tiff
+**/*.3ds
+**/*.3DS
+**/*.fbx
+**/*.FBX
+**/*.lxo
+**/*.LXO
+**/*.ma
+**/*.MA
+**/*.obj
+**/*.OBJ
+
+# Build artifacts and caches
+Library/
+Temp/
+.git/
+.vs/
+Packages/PackageCache/
+
+# Keep Prettier focused on code files (js, ts, json, css, md, yml)
+# C# is formatted by C# extension / dotnet formatter
+**/*.cs
