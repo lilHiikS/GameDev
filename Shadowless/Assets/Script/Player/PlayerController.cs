@@ -21,6 +21,13 @@ public class PlayerController2D : MonoBehaviour
     private IInteractable interactable;
     private float jumpCooldown = 0.2f;
     private float jumpTimer = 0f;
+    private AudioSource audioSource;
+
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void FixedUpdate()
     {
@@ -112,4 +119,11 @@ public class PlayerController2D : MonoBehaviour
             interactable.Interact();
         }
     }
+    
+public void PlayJumpSound()
+{
+    if (audioSource != null && audioSource.clip != null)
+        audioSource.Play();
+}
+    
 }
