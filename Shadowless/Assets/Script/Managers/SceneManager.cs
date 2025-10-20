@@ -2,61 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    public List<SceneAsset> scenes;
+    public static SceneManager Instance; // Singleton instance
     public List<DoorInteractable> doorInteractables;
-    private GameObject player;
+    public SceneAsset startScene;
     public Animator transitionAnimator;
 
-    void Start()
+    private GameObject player;
+    private string targetDoorId;
+
+    void Awake()
     {
-        player = GameObject.FindWithTag("Player");
-        doorInteractables = new List<DoorInteractable>(FindObjectsByType<DoorInteractable>(FindObjectsSortMode.None));
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void LoadScene(int index)
+    void OnDestroy()
     {
-        if (index < 0 || index >= scenes.Count)
-        {
-            Debug.LogError("Invalid scene index");
-            return;
-        }
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(scenes[index].name);
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void Play()
+    public void LoadScene(SceneAsset sceneToLoad)
     {
-        LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad.name);
     }
 
-    public void TeleportPlayerToDoor(string targetDoorId)
+    public void TransitionToScene(SceneAsset sceneToLoad, string targetDoorId)
     {
-        if (player != null)
-        {
-            foreach (var door in doorInteractables)
-            {
-                if (door.doorId == targetDoorId)
-                {
-                    StartCoroutine(TransitionAndLoadScene(door));
-                    break;
-                }
-            }
-        }
+        this.targetDoorId = targetDoorId;
+        StartCoroutine(TransitionAndLoadScene(sceneToLoad));
     }
 
-    private IEnumerator TransitionAndLoadScene(DoorInteractable door)
+    private IEnumerator TransitionAndLoadScene(SceneAsset sceneAsset)
     {
         transitionAnimator.SetBool("Transition", true);
 
         yield return new WaitForSeconds(1f);
 
-        player.transform.position = door.spawnPoint.transform.position;
+        LoadScene(sceneAsset);
+    }
 
+    private IEnumerator FadeIn()
+    {
         yield return new WaitForSeconds(0.4f);
-
         transitionAnimator.SetBool("Transition", false);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        player = GameObject.FindWithTag("Player");
+        doorInteractables = new List<DoorInteractable>(FindObjectsByType<DoorInteractable>(FindObjectsSortMode.None));
+
+        if (targetDoorId != null)
+        {
+            foreach (var door in doorInteractables)
+            {
+                if (door.doorId == targetDoorId)
+                {
+                    player.transform.position = door.spawnPoint.transform.position;
+                    break;
+                }
+            }
+        }
+
+        StartCoroutine(FadeIn());
+        targetDoorId = null; // Clear the target door ID after spawning
     }
 }

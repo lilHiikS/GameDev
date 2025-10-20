@@ -9,7 +9,22 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1785d3293485f7947a27be2bc7c1ee5a
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainHalls.unity
+    guid: 592bb8da5c0bd4b41ae145535258351e
+  - enabled: 1
+    path: Assets/Scenes/Act1.unity
+    guid: 6071f1e58d469434e9fbea06dd40af73
+  - enabled: 1
+    path: Assets/Scenes/Act2.unity
+    guid: 4a1b1880fb881794ba2625e6a6f36a22
+  - enabled: 1
+    path: Assets/Scenes/Act3.unity
+    guid: 6a81b7b336fce9c42b45f5aaf615d93c
+  - enabled: 1
+    path: Assets/Scenes/Act4.unity
+    guid: f4fff027af94651439266dcbecde9522
+  - enabled: 1
+    path: Assets/Scenes/Act5.unity
+    guid: cade4f43798dafd4587b2cd5896e3b2b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
