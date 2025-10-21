@@ -1,23 +1,19 @@
+using UnityEditor;
 using UnityEngine;
 
 public class DoorInteractable : MonoBehaviour, IInteractable
 {
     public string doorId;
-    public GameObject spawnPoint;
     public string targetDoorId;
-    private SceneManager sceneManager;
-    public GameObject icon;
-
-    void Start()
-    {
-        sceneManager = FindFirstObjectByType<SceneManager>();
-    }
+    public GameObject spawnPoint;
+    public SceneAsset sceneToLoad;
 
     public void Interact()
     {
+        var sceneManager = FindFirstObjectByType<SceneManager>();
         if (sceneManager != null)
         {
-            sceneManager.TeleportPlayerToDoor(targetDoorId);
+            sceneManager.TransitionToScene(sceneToLoad, targetDoorId);
         }
     }
 }
