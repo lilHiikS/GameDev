@@ -22,6 +22,20 @@ public class PlayerController2D : MonoBehaviour
     private float jumpCooldown = 0.2f;
     private float jumpTimer = 0f;
 
+    public static PlayerController2D Instance;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate player
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // Persist across scenes
+    }
+
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundLayer);
