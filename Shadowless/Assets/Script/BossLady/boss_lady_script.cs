@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class boss_lady_script : MonoBehaviour
 {
+    
+    [SerializeField]
+    private Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +15,10 @@ public class boss_lady_script : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void idle()
+    {
+        animator.SetBool("isIdle", true);
     }
 }
