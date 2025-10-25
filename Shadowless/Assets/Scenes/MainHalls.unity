@@ -454,13 +454,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gorgon
       objectReference: {fileID: 0}
+    - target: {fileID: 8054496478159080693, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 992132941}
+    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5568001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5028
+      objectReference: {fileID: 0}
     - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.72
+      value: 5.95
       objectReference: {fileID: 0}
     - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.48
+      value: -13.49
       objectReference: {fileID: 0}
     - target: {fileID: 8560026902320864701, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7467,6 +7479,11 @@ SpriteRenderer:
 --- !u!1 &992132938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+  m_PrefabInstance: {fileID: 173300776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &992132941 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7255631714744399108, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
   m_PrefabInstance: {fileID: 173300776}
   m_PrefabAsset: {fileID: 0}
 --- !u!50 &992132944
