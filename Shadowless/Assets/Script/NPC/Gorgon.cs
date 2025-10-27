@@ -5,13 +5,15 @@ public class GorgonAI : MonoBehaviour
     public float speed = 2f;
     public float detectionRange = 20f;
     public float attackRange = 1f;
+    public float attackDamage = 5f;
+    public float attackCooldown = 1f;
     public Transform pointA;
     public Transform pointB;
     public Transform player;
     public Transform groundCheck;
     public LayerMask groundLayer;
-
     private Vector3 targetPoint;
+    private float lastAttackTime = 0f;
 
     [SerializeField]
     private GorgonState currentState = GorgonState.Idle;
@@ -87,8 +89,19 @@ public class GorgonAI : MonoBehaviour
 
     void AttackPlayer()
     {
+        // Check if we can attack (cooldown)
+        if (Time.time - lastAttackTime < attackCooldown)
+            return;
+
         animator.SetTrigger("attack");
         Debug.Log("Gorgon attacks!");
+
+        // Deal damage to player if in range
+        if (PlayerInRange(attackRange) && PlayerController2D.Instance != null)
+        {
+            PlayerController2D.Instance.TakeDamage(attackDamage);
+            lastAttackTime = Time.time;
+        }
     }
 
     bool PlayerInRange(float range)
