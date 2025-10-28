@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BossHealth : MonoBehaviour, IDamageable
@@ -7,6 +8,7 @@ public class BossHealth : MonoBehaviour, IDamageable
     public Animator animator;
     public Flash flash;
     private Knockback knockback;
+    private bool isDead = false;
 
     void Start()
     {
@@ -25,9 +27,24 @@ public class BossHealth : MonoBehaviour, IDamageable
             gameObject.layer = LayerMask.NameToLayer("Default");
             var rb = GetComponent<Rigidbody2D>();
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-            animator.SetBool("death", true);
+            StartCoroutine(PlayDeathAnimation());
         }
     }
+
+    private IEnumerator PlayDeathAnimation()
+    {
+        // Start death animation
+        animator.Play("death");
+
+        // Vent på at animationen er færdig
+        var deathClip = animator.runtimeAnimatorController.animationClips[0]; // antag death er første clip
+        yield return new WaitForSeconds(2f);
+
+        // Skift til idle_death
+        animator.Play("idle_death");
+    }
+
+
 
     public void OnDestroy()
     {
