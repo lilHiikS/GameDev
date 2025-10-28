@@ -19,6 +19,8 @@ public class Slime : MonoBehaviour
     public float attackJumpYForce = 8f;     // fixed upward speed for attack
     public float maxAttackXSpeed = 6f;      // clamp X speed during attack
     public float attackCooldown = 1f;       // time between attacks
+    public float knockbackForce = 5f;         // force applied to player on hit
+    public int attackDamage = 1;             // damage dealt to player on hit
 
     [Header("Attack Timing")]
     public float preAttackPause = 0.2f;       // delay before jumping
@@ -36,6 +38,8 @@ public class Slime : MonoBehaviour
     private Vector2 attackTargetPosition; // The locked position for the attack
     private Animator animator;
 
+    private Knockback knockback;
+
     // FSM
     private State state = State.Idle;
 
@@ -43,6 +47,7 @@ public class Slime : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        knockback = GetComponent<Knockback>();
     }
 
     void Update()
@@ -129,6 +134,8 @@ public class Slime : MonoBehaviour
     {
         if (player == null) return;
 
+        if (knockback.isKnockedBack) return;
+
         // Face direction based on velocity
         if (rb.linearVelocity.x < 0)
         {
@@ -209,7 +216,7 @@ public class Slime : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    private void OnDrawGizmosSelected()
+    public void OnDrawGizmosSelected()
     {
         // Draw detection range
         Gizmos.color = Color.yellow;
@@ -224,6 +231,29 @@ public class Slime : MonoBehaviour
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Deal damage to player
+            if (collision.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth))
+            {
+                playerHealth.TakeDamage(attackDamage);
+
+                var pc = collision.gameObject.GetComponent<PlayerController2D>();
+                float dir = Mathf.Sign(collision.transform.position.x - transform.position.x);
+                if (dir == 0f) dir = 1f;
+
+                Vector2 kb = new Vector2(dir * knockbackForce, 0f); // add Y if desired
+
+                if (pc != null)
+                {
+                    pc.ApplyKnockback(kb); // uses default stun duration
+                }
+            }
         }
     }
 }

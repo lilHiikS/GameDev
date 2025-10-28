@@ -34,6 +34,7 @@ Transform:
   - {fileID: 2829397521100848709}
   - {fileID: 5938109751641936077}
   - {fileID: 8084564836798946432}
+  - {fileID: 6225926095450178354}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6407068028839028667
@@ -48,6 +49,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d2847537b811e42b0da7c0ed2ac580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &1778648165145079981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6225926095450178354}
+  - component: {fileID: 4995546607952717107}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6225926095450178354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778648165145079981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3322728778194712457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4995546607952717107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778648165145079981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 377fa02fa87f98d4cbd0cd7b27ece289, type: 2}
 --- !u!1 &3995857155273437644
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,9 +267,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3eba4b4296d1b4baa1b7efed36fb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
-  doorInteractables: []
   startScene: {fileID: 102900000, guid: 592bb8da5c0bd4b41ae145535258351e, type: 3}
   transitionAnimator: {fileID: 1339223873916377453}
+  portalSpawnIn: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  storyProgression: 0
+  portalPrefab: {fileID: 6176717234223994453, guid: 43d4a5da861ef394cb6ab74ee317dae0, type: 3}
 --- !u!1 &8438343054649957358
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +375,7 @@ Transform:
   m_GameObject: {fileID: 8502864600730296254}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.18918, y: 6.2706194, z: -10}
+  m_LocalPosition: {x: 1.99, y: -11.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 9125971734788970374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.18918, y: 6.2706194, z: -10}
+  m_LocalPosition: {x: 1.99, y: -11.65, z: -10}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -519,7 +572,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
