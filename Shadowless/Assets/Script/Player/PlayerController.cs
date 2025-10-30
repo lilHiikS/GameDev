@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +15,8 @@ public class PlayerController2D : MonoBehaviour
     public LayerMask groundLayer;
     public Animator animator;
 
+    public Animator UI;
+
     private bool isGrounded;
     private float horizontalMovement;
     private float groundCheckRadius = 0.3f;
@@ -21,6 +25,13 @@ public class PlayerController2D : MonoBehaviour
     private IInteractable interactable;
     private float jumpCooldown = 0.2f;
     private float jumpTimer = 0f;
+
+
+    private bool isStunned = false;
+
+    public PlayerHealth health;
+
+    public PlayerAttack playerAttack;
 
     public static PlayerController2D Instance;
 
@@ -61,12 +72,41 @@ public class PlayerController2D : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (health.isDead)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isFalling", false);
+            animator.SetBool("isJumping", false);
+            UI.SetTrigger("Death");
+            return;
+        }
+
+        if (isStunned)
+        {
+            return;
+        }
+
+        if (playerAttack.isAttacking && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundLayer);
 
-        // Handle horizontal player movement
-        float currentSpeed = isGrounded ? moveSpeed : moveSpeed * 0.7f;
-        Vector2 movement = new Vector2(horizontalMovement * currentSpeed, rb.linearVelocity.y);
-        rb.linearVelocity = movement;
+        // If stunned, do not overwrite horizontal velocity — allow physics to play out
+        if (!isStunned)
+        {
+            float currentSpeed = isGrounded ? moveSpeed : moveSpeed * 0.7f;
+            Vector2 movement = new Vector2(horizontalMovement * currentSpeed, rb.linearVelocity.y);
+            rb.linearVelocity = movement;
+        }
+        else
+        {
+            // keep animations consistent while stunned
+            animator.SetBool("isRunning", false);
+        }
 
         // Set running animation
         animator.SetBool("isRunning", isGrounded && horizontalMovement != 0);
@@ -97,6 +137,21 @@ public class PlayerController2D : MonoBehaviour
             Flip();
     }
 
+    // Public API for external knockback callers (Slime)
+    public void ApplyKnockback(Vector2 velocity)
+    {
+        if (rb == null) return;
+        isStunned = true;
+        rb.linearVelocity = velocity;
+        StartCoroutine(WaitForUnstun(0.25f));
+    }
+
+    private IEnumerator WaitForUnstun(float time)
+    {
+        yield return new WaitForSeconds(time);
+        isStunned = false;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
@@ -107,6 +162,12 @@ public class PlayerController2D : MonoBehaviour
         if (!context.performed) return;
         if (isGrounded)
             jump = true;
+    }
+
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (!context.started || health.isDead) return;
+        playerAttack.Attack();
     }
 
     private void Flip()
