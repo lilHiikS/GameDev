@@ -82,16 +82,16 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8915327726919978405, guid: b0aab3a3e7c11440c92681ef57fbdcc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &7255631714744399108
@@ -131,6 +131,8 @@ MonoBehaviour:
   speed: 2
   detectionRange: 10
   attackRange: 1
+  attackDamage: 5
+  attackCooldown: 1
   pointA: {fileID: 0}
   pointB: {fileID: 0}
   player: {fileID: 0}
