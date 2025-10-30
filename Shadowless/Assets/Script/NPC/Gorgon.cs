@@ -5,7 +5,7 @@ public class GorgonAI : MonoBehaviour
     public float speed = 2f;
     public float detectionRange = 20f;
     public float attackRange = 1f;
-    public float attackDamage = 5f;
+    public int attackDamage = 5;
     public float attackCooldown = 1f;
     public Transform pointA;
     public Transform pointB;
@@ -75,7 +75,6 @@ public class GorgonAI : MonoBehaviour
 
         animator.SetBool("isWalking", true);
 
-        Debug.Log("Gorgon is chasing the player!");
 
         var newPosition = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         transform.position = new Vector2(newPosition.x, transform.position.y);
@@ -94,12 +93,11 @@ public class GorgonAI : MonoBehaviour
             return;
 
         animator.SetTrigger("attack");
-        Debug.Log("Gorgon attacks!");
 
         // Deal damage to player if in range
         if (PlayerInRange(attackRange) && PlayerController2D.Instance != null)
         {
-            PlayerController2D.Instance.TakeDamage(attackDamage);
+            PlayerController2D.Instance.GetComponent<Health>().TakeDamage(attackDamage);
             lastAttackTime = Time.time;
         }
     }
@@ -107,7 +105,6 @@ public class GorgonAI : MonoBehaviour
     bool PlayerInRange(float range)
     {
         var inRange = player != null && Vector2.Distance(transform.position, player.position) <= range;
-        Debug.Log($"PlayerInRange({range}): {inRange}");
         return inRange;
     }
 

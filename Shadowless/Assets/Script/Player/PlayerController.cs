@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,29 +33,6 @@ public class PlayerController2D : MonoBehaviour
     public PlayerAttack playerAttack;
 
     public static PlayerController2D Instance;
-
-    public float Health, MaxHealth;
-
-    [SerializeField]
-    private HP healthBar;
-
-    void Start()
-    {
-        healthBar.SetMaxHealth(MaxHealth);
-    }
-
-    // Method for taking damage from enemies
-    public void TakeDamage(float damage)
-    {
-        SetHealth(-damage);
-    }
-
-    public void SetHealth(float healthChange)
-    {
-        Health += healthChange;
-        Health = Mathf.Clamp(Health, 0, MaxHealth);
-        healthBar.SetHealth(Health);
-    }
 
     void Awake()
     {
