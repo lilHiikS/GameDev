@@ -1,0 +1,74 @@
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class MagicHomingMissile : MonoBehaviour
+{
+    public float speedX = 6f;
+
+    public float yFollowStrength = 5f;
+    public float maxYVelocity = 10f;
+
+    public float lifetime = 8f;
+    public int damage = 1;
+    
+    private Animator animator;
+
+    Rigidbody2D rb;
+    Transform player;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void OnEnable()
+    {
+        CancelInvoke(nameof(Disable));
+    }
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        if(animator != null)
+            animator.Play("Idle"); // eller hvad animationen hedder
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+            player = p.transform;
+        else
+            Debug.LogError("Missile kan ikke finde Player! Tjek at spilleren har tag 'Player'.");
+        Destroy(gameObject, lifetime);
+    }
+
+    void FixedUpdate()
+    {
+        float vx = speedX;
+
+        float vy = rb.velocity.y;
+
+        if (player)
+        {
+            float yDelta = player.position.y - transform.position.y;
+            float targetVy = yDelta * yFollowStrength;
+
+            vy = Mathf.MoveTowards(rb.velocity.y, Mathf.Clamp(targetVy, -maxYVelocity, maxYVelocity),
+                yFollowStrength * Time.fixedDeltaTime);
+        }
+        
+        rb.velocity = new Vector2(vx, vy);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        var dmg = other.GetComponent<IDamageable>();
+        if (dmg != null && other.CompareTag("Player"))
+        {
+            dmg.TakeDamage(damage);
+            Disable();
+        }
+    }
+    void Disable()
+    {
+        gameObject.SetActive(false);
+    }
+
+}

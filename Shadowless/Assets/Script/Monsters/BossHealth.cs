@@ -9,6 +9,8 @@ public class BossHealth : MonoBehaviour, IDamageable
     public Flash flash;
     private Knockback knockback;
     private bool isDead = false;
+    public bool canTakeDamage = false;
+
 
     void Start()
     {
@@ -18,9 +20,13 @@ public class BossHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        //knockback.ApplyKnockback((transform.position.x - SceneManager.Instance.player.transform.position.x) > 0 ? Vector2.right : Vector2.left);
-        flash.HitFlash();
+        if (canTakeDamage)
+        {
+            currentHealth -= damage;
+            //knockback.ApplyKnockback((transform.position.x - SceneManager.Instance.player.transform.position.x) > 0 ? Vector2.right : Vector2.left);
+            flash.HitFlash();
+    
+        } 
         if (currentHealth <= 0)
         {
             GetComponent<Rigidbody2D>().excludeLayers = LayerMask.GetMask("Player", "Enemy");
