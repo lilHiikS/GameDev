@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
+using Script.BossLady.attacks;
+
 public class boss_lady_script : MonoBehaviour
 {
     [SerializeField] private BossState currentState = BossState.Idle;
@@ -12,6 +14,9 @@ public class boss_lady_script : MonoBehaviour
 
     [SerializeField] private float lineDelay = 3f; // tid mellem linjer
 
+    private BossHealth bossHealth;
+
+    private BossShooter shooter;
 
     private String bigText =
     "Ah, finally! The 'big' hero arrives!\n" +
@@ -45,6 +50,8 @@ public class boss_lady_script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bossHealth = GetComponent<BossHealth>();
+        shooter = GetComponent<BossShooter>();
         StartCoroutine(StartSequence());
     }
 
@@ -52,6 +59,11 @@ public class boss_lady_script : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void StartAttackPhase()
+    {
+        shooter.Shoot();
     }
 
     void Idle()
@@ -67,9 +79,13 @@ public class boss_lady_script : MonoBehaviour
         // Skjul dialog
         dialogText.gameObject.SetActive(false);
 
+        bossHealth.canTakeDamage = true;
+        
         // Start angreb
         currentState = BossState.Attack;
         animator.SetBool("isAttacking", true); // Sørg for at din Animator har denne bool
+        
+        StartAttackPhase();
     }
     
     IEnumerator ShowDialogLines(string fullText)
