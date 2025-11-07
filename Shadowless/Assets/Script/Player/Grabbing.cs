@@ -8,6 +8,9 @@ public class Grabbing : MonoBehaviour
     public Rigidbody2D playerRb;
     public float grabSpeed = 15f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource grabSound;
+
     private Transform grabbedObject;
     private Rigidbody2D grabbedRb;
     private Collider2D grabbedCollider;
@@ -38,21 +41,19 @@ public class Grabbing : MonoBehaviour
             }
         }
 
-        // Remove outline from previous hovered object
         if (hoveredObject != null && hoveredObject != newHovered)
         {
             var sr = hoveredObject.GetComponent<SpriteRenderer>();
             if (sr != null)
-                sr.material.DisableKeyword("_USE_OUTLINE"); // Use your actual keyword
+                sr.material.DisableKeyword("_USE_OUTLINE");
             hoveredObject = null;
         }
 
-        // Add outline to new hovered object
         if (newHovered != null && newHovered != hoveredObject)
         {
             var sr = newHovered.GetComponent<SpriteRenderer>();
             if (sr != null)
-                sr.material.EnableKeyword("_USE_OUTLINE"); // Use your actual keyword
+                sr.material.EnableKeyword("_USE_OUTLINE");
             hoveredObject = newHovered;
         }
     }
@@ -90,6 +91,12 @@ public class Grabbing : MonoBehaviour
                     {
                         Physics2D.IgnoreCollision(grabbedCollider, playerCollider, true);
                     }
+
+                    // Play grab sound
+                    if (grabSound != null)
+                    {
+                        grabSound.Play();
+                    }
                 }
             }
         }
@@ -106,7 +113,6 @@ public class Grabbing : MonoBehaviour
                 grabbedRb = null;
             }
         }
-
     }
 
     private void FollowCursor()
@@ -118,7 +124,6 @@ public class Grabbing : MonoBehaviour
         Vector2 playerPos = transform.position;
         Vector2 targetPos = new Vector2(mouseWorld.x, mouseWorld.y);
 
-        // Clamp the item position within grabRange from the player
         Vector2 clampedPos = playerPos + Vector2.ClampMagnitude(targetPos - playerPos, grabRange);
 
         if (grabbedRb == null)

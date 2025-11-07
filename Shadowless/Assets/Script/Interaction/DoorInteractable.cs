@@ -9,6 +9,8 @@ public class DoorInteractable : MonoBehaviour, IInteractable
     public GameObject romanNumber;
     public SceneManager.StoryProgression act;
 
+    [SerializeField] private AudioSource interactionSound;
+
     void Start()
     {
         if ((int)SceneManager.Instance.storyProgression > (int)act)
@@ -26,7 +28,6 @@ public class DoorInteractable : MonoBehaviour, IInteractable
                 lightSource.SetActive(true);
             }
         }
-
     }
 
     public void Interact()
@@ -36,9 +37,18 @@ public class DoorInteractable : MonoBehaviour, IInteractable
         if ((int)SceneManager.Instance.storyProgression != (int)act)
             return;
 
+        // Play interaction sound if assigned
+        if (interactionSound != null)
+        {
+            interactionSound.Play();
+        }
+
         if (sceneManager != null)
         {
-            sceneManager.TransitionToScene(sceneToLoad, customSpawnPoint != null ? customSpawnPoint.transform.position : null);
+            sceneManager.TransitionToScene(
+                sceneToLoad, 
+                customSpawnPoint != null ? customSpawnPoint.transform.position : null
+            );
         }
     }
 }
