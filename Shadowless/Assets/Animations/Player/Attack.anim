@@ -32,8 +32,6 @@ AnimationClip:
       value: {fileID: -8091215800817211460, guid: f08abff6ae7da1542abd9cc3aaeb9d1d, type: 3}
     - time: 0.28333333
       value: {fileID: 7250208928380111583, guid: b8c011d848be0914f9524b138c322e04, type: 3}
-    - time: 0.33333334
-      value: {fileID: 7250208928380111583, guid: b8c011d848be0914f9524b138c322e04, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -62,13 +60,12 @@ AnimationClip:
     - {fileID: 20436142721119715, guid: ecadd189c5dc58b4787a866a1ce92ecb, type: 3}
     - {fileID: -8091215800817211460, guid: f08abff6ae7da1542abd9cc3aaeb9d1d, type: 3}
     - {fileID: 7250208928380111583, guid: b8c011d848be0914f9524b138c322e04, type: 3}
-    - {fileID: 7250208928380111583, guid: b8c011d848be0914f9524b138c322e04, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 0.3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -89,21 +86,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.11666667
-    functionName: PerformAttack
+    functionName: OnAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: OnEnableCombo
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.28333333
-    functionName: EndAttack
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.28333333
-    functionName: EnableCombo
+    functionName: OnEndAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
