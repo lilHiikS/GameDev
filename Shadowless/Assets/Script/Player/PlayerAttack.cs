@@ -27,15 +27,18 @@ public class PlayerAttack : MonoBehaviour
 
     public void Attack()
     {
+        if (isAttacking) return;
+
         if (canCombo)
         {
             Debug.Log("Combo Attack!");
-            animator.SetTrigger("AttackCombo");
+            isAttacking = true;
             canCombo = false;
+            comboTimer = 0f;
+            animator.SetTrigger("AttackCombo");
             return;
         }
 
-        if (isAttacking) return;
         if (attackTimer < timeBetweenAttacks) return;
 
         isAttacking = true;
