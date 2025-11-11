@@ -131,7 +131,7 @@ public class SceneManager : MonoBehaviour
         spawn.y += 1f;
         Instantiate(portalPrefab, spawn, portalPrefab.transform.rotation);
         yield return new WaitForSeconds(1f);
-        player.GetComponent<Renderer>().enabled = true;
+        player.GetComponentInChildren<Renderer>().enabled = true;
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         isPortalTransition = false;
     }
@@ -153,7 +153,7 @@ public class SceneManager : MonoBehaviour
             {
                 if (isPortalTransition)
                 {
-                    player.GetComponent<Renderer>().enabled = false;
+                    player.GetComponentInChildren<Renderer>().enabled = false;
                     player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     player.transform.position = lastKnownPosition;
                     StartCoroutine(FadeInPortal());

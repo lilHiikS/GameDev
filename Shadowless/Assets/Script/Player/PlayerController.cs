@@ -16,6 +16,10 @@ public class PlayerController2D : MonoBehaviour
 
     public Animator UI;
 
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource footstepSource;
+    [SerializeField] private AudioSource jumpSource;
+
     private bool isGrounded;
     private float horizontalMovement;
     private float groundCheckRadius = 0.3f;
@@ -24,7 +28,6 @@ public class PlayerController2D : MonoBehaviour
     private IInteractable interactable;
     private float jumpCooldown = 0.2f;
     private float jumpTimer = 0f;
-
 
     private bool isStunned = false;
 
@@ -38,12 +41,12 @@ public class PlayerController2D : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject); // Destroy duplicate player
+            Destroy(gameObject);
             return;
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Persist across scenes
+        DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()
@@ -69,9 +72,9 @@ public class PlayerController2D : MonoBehaviour
             return;
         }
 
+        bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundLayer);
 
-        // If stunned, do not overwrite horizontal velocity — allow physics to play out
         if (!isStunned)
         {
             float currentSpeed = isGrounded ? moveSpeed : moveSpeed * 0.7f;
@@ -80,18 +83,24 @@ public class PlayerController2D : MonoBehaviour
         }
         else
         {
-            // keep animations consistent while stunned
             animator.SetBool("isRunning", false);
         }
 
-        // Set running animation
         animator.SetBool("isRunning", isGrounded && horizontalMovement != 0);
-
-        // Set falling animation
         animator.SetBool("isFalling", rb.linearVelocityY < 0 && !isGrounded);
-
-        // Set Jumping animation
         animator.SetBool("isJumping", rb.linearVelocityY > 0 && !isGrounded);
+
+        // Footstep sound logic
+        if (isGrounded && horizontalMovement != 0)
+        {
+            if (!footstepSource.isPlaying)
+                footstepSource.Play();
+        }
+        else
+        {
+            if (footstepSource.isPlaying)
+                footstepSource.Stop();
+        }
 
         if (jumpTimer < jumpCooldown)
         {
@@ -104,16 +113,17 @@ public class PlayerController2D : MonoBehaviour
             rb.AddForceY(jumpForce, ForceMode2D.Impulse);
             jump = false;
             jumpTimer = 0f;
+
+            if (jumpSource != null)
+                jumpSource.Play();
         }
 
-        // Handle character flipping
         if (facingRight && horizontalMovement < 0)
             Flip();
         else if (!facingRight && horizontalMovement > 0)
             Flip();
     }
 
-    // Public API for external knockback callers (Slime)
     public void ApplyKnockback(Vector2 velocity)
     {
         if (rb == null) return;
