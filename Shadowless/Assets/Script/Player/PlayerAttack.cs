@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
     public bool isAttacking = false;
+    public bool hasWeapon = false;
 
     public int attackDamage = 1;
 
@@ -27,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void Attack()
     {
+        if (!hasWeapon) return;
         if (isAttacking) return;
 
         if (canCombo)
