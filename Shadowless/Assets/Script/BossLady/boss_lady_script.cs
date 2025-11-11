@@ -13,6 +13,8 @@ public class boss_lady_script : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [SerializeField] private float lineDelay = 3f; // tid mellem linjer
+    
+    private PlayerHealth playerHealth;
 
     private BossHealth bossHealth;
 
@@ -52,6 +54,11 @@ public class boss_lady_script : MonoBehaviour
     {
         bossHealth = GetComponent<BossHealth>();
         shooter = GetComponent<BossShooter>();
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+            playerHealth = p.GetComponent<PlayerHealth>();
+        else
+            Debug.LogError("Boss kan ikke finde spilleren!");
         StartCoroutine(StartSequence());
     }
 
@@ -63,12 +70,44 @@ public class boss_lady_script : MonoBehaviour
 
     void StartAttackPhase()
     {
+        CancelInvoke(nameof(AttackCycle));
+        InvokeRepeating(nameof(AttackCycle), 0f, 1f);
+
+    }
+    void AttackCycle()
+    {
+        if (bossHealth.currentHealth <= 0)
+        {
+            CancelInvoke(nameof(AttackCycle));
+            Debug.Log("BOSS ER DØD! Boss HP: " + bossHealth.currentHealth);
+            return;
+        }
+
+        if (playerHealth == null || playerHealth.isDead)
+        {
+            CancelInvoke(nameof(AttackCycle));
+            Debug.Log("SPILLER ER DØD! Stopper bossens angreb");
+            Idle();
+            return;
+        }
+        // Hvis begge lever, så angrib
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isAttacking", true);
         shooter.Shoot();
     }
 
     void Idle()
     {
+        currentState = BossState.Idle;
         animator.SetBool("isIdle", true);
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isRunning", false);
+        animator.SetBool("isWalking", false);
+
+        // Stop alle Invoke kald bare for sikkerhed
+        CancelInvoke(nameof(AttackCycle));
+
+        Debug.Log("Bossen står nu stille (Idle).");
     }
 
     IEnumerator StartSequence()

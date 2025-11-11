@@ -59,10 +59,19 @@ public class MagicHomingMissile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        var dmg = other.GetComponent<IDamageable>();
-        if (dmg != null && other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            dmg.TakeDamage(damage);
+            var playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {   
+                playerHealth.TakeDamage(damage);
+                Debug.Log("Missile ramte spilleren og gjorde skade!");
+            }
+            Disable();
+
+        } 
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
             Disable();
         }
     }
