@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8492273472107522986, guid: dd4ae2ced83c8de49af1e490c4f549b9, type: 3}
       propertyPath: nextAct
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -567,6 +567,7 @@ MonoBehaviour:
   lightSource: {fileID: 0}
   romanNumber: {fileID: 0}
   act: 2
+  interactionSound: {fileID: 0}
 --- !u!4 &586983327
 Transform:
   m_ObjectHideFlags: 0
