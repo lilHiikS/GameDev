@@ -22,7 +22,7 @@ public class PlayerController2D : MonoBehaviour
 
     private bool isGrounded;
     private float horizontalMovement;
-    private float groundCheckRadius = 0.3f;
+    private float groundCheckRadius = 0.5f;
     private bool jump;
     private bool facingRight = true;
     private IInteractable interactable;
