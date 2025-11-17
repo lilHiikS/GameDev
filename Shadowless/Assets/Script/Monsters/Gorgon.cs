@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class GorgonAI : MonoBehaviour
+public class GorgonAI : MonoBehaviour, IDamageable
 {
     public float speed = 2f;
     public float detectionRange = 20f;
     public float attackRange = 1f;
-    public int attackDamage = 5;
+    public int attackDamage = 1;
     public float attackCooldown = 1f;
     public Transform pointA;
     public Transform pointB;
@@ -15,6 +15,11 @@ public class GorgonAI : MonoBehaviour
     private Vector3 targetPoint;
     private float lastAttackTime = 0f;
 
+    [Header("Health Settings")]
+    public int maxHealth = 3;
+    private int currentHealth;
+    private bool isDead = false;
+
     [SerializeField]
     private GorgonState currentState = GorgonState.Idle;
 
@@ -23,14 +28,18 @@ public class GorgonAI : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+
     void Start()
     {
+        player = GameObject.FindWithTag("Player").transform;
         targetPoint = pointA.position;
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Update() //her - måske fiks så den ik kører 60 gerne per sekund
     {
+        if (isDead) return;
         switch (currentState)
         {
             case GorgonState.Idle:
@@ -95,12 +104,66 @@ public class GorgonAI : MonoBehaviour
         animator.SetTrigger("attack");
 
         // Deal damage to player if in range
-        if (PlayerInRange(attackRange) && PlayerController2D.Instance != null)
+        if (PlayerInRange(attackRange) && player != null)
         {
-            PlayerController2D.Instance.GetComponent<Health>().TakeDamage(attackDamage);
+            // Try to get PlayerHealth component
+            if (player.TryGetComponent<PlayerHealth>(out var playerHealth))
+            {
+                playerHealth.TakeDamage(attackDamage);
+            }
+
+            // Optional: Apply knockback to player if desired
+            var pc = player.GetComponent<PlayerController2D>();
+            if (pc != null)
+            {
+                float dir = Mathf.Sign(player.position.x - transform.position.x);
+                if (dir == 0f) dir = 1f;
+
+                Vector2 knockback = new Vector2(dir * 5f, 0f); // tweak force as needed
+                pc.ApplyKnockback(knockback);
+            }
+
             lastAttackTime = Time.time;
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        if (isDead) return;
+
+        currentHealth -= damage;
+
+        animator.SetBool("isWalking", false);
+        animator.ResetTrigger("attack");
+        
+        animator.SetTrigger("hurt"); // play hurt animation if available
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        animator.SetTrigger("dead"); // play death animation
+
+        // Disable AI movement / colliders
+        var col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        // Optional: destroy after animation ends
+        Destroy(gameObject, 2f);
+    }
+
 
     bool PlayerInRange(float range)
     {
