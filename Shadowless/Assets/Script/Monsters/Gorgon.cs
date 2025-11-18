@@ -28,6 +28,8 @@ public class GorgonAI : MonoBehaviour, IDamageable
     [SerializeField]
     private Animator animator;
 
+    [Header("System Management")]
+    public GorgonManager manager;
 
     void Start()
     {
@@ -135,7 +137,7 @@ public class GorgonAI : MonoBehaviour, IDamageable
 
         animator.SetBool("isWalking", false);
         animator.ResetTrigger("attack");
-        
+
         animator.SetTrigger("hurt"); // play hurt animation if available
 
         if (currentHealth <= 0)
@@ -144,12 +146,17 @@ public class GorgonAI : MonoBehaviour, IDamageable
         }
     }
 
-    private void Die()
+ private void Die()
     {
         isDead = true;
-        animator.SetTrigger("dead"); // play death animation
+        animator.SetTrigger("dead"); 
 
-        // Disable AI movement / colliders
+        if (GorgonManager.Instance != null)
+        {
+            GorgonManager.Instance.ReportGorgonDefeated(); 
+            Debug.Log("Gorgon reported death successfully."); 
+        }
+
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
@@ -160,7 +167,6 @@ public class GorgonAI : MonoBehaviour, IDamageable
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
-        // Optional: destroy after animation ends
         Destroy(gameObject, 2f);
     }
 

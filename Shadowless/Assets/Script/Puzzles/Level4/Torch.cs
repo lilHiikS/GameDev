@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour
 {
-    public int torchID; // order number
+    public int torchID; 
     public Sprite unlitSprite;
     public Sprite litSprite;
     public bool isLit = false;
@@ -16,27 +16,15 @@ public class Torch : MonoBehaviour
         sr.sprite = unlitSprite;
     }
 
-    void OnMouseDown()
+    public void ResetTorch()
     {
-        // Only works if this GameObject has a Collider2D
-        Debug.Log("Torch clicked: " + torchID);
-
-        if (!isLit)
-        {
-            LightTorch();
-        }
+        isLit = false;
+        sr.sprite = unlitSprite;
     }
 
     public void LightTorch()
     {
         isLit = true;
         sr.sprite = litSprite;
-        torchManager.TorchActivated(torchID);
-    }
-
-    public void ResetTorch()
-    {
-        isLit = false;
-        sr.sprite = unlitSprite;
     }
 }
