@@ -15,8 +15,9 @@
 - OLAJ: Lave Act2 færdigt, så der ikke er nogle bugs. Flytte døren, så man ikke kan sidde stuck.
 - Oliver: Lave teleport til Boss. Kamera zoom ud/ind. Skip dialog.
 - Act 3: Skal laves. Morten har en mini boss.
-- Act 4: Lave reset af torches når det fejler. Sæt flash-script / Knockback-script på Gorgons
-- Generelt lave effekter. Particle system, Angriber slimes osv. 
+- Act 4: Lave reset af torches når det fejler. Sæt flash-script / Knockback-script på Gorgons. Lave portalen conditioanal, så den ikke er vist når der er Gorgons i live
+- Generelt lave effekter. Particle system, Angriber slimes osv.
+- Bug: Kasser kan flytte player.
 - Sound: Sound effects på diverse enemies + andre små ting
 - Skrive rapport
 
