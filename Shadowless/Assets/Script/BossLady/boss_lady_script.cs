@@ -3,16 +3,22 @@ using TMPro;
 using System.Collections;
 using System;
 using Script.BossLady.attacks;
+using Script.BossLady;
 
-public class boss_lady_script : MonoBehaviour
+
+public class boss_lady_script : MonoBehaviour, IInteractable
 {
-    [SerializeField] private BossState currentState = BossState.Idle;
+    [SerializeField] internal BossState currentState = BossState.Idle;
 
     [SerializeField] private TextMeshProUGUI dialogText; // Træk din UI-tekst herind i Inspector
+    
+    [SerializeField] private TextMeshProUGUI eToskip;
 
     [SerializeField] private Animator animator;
 
     [SerializeField] private float lineDelay = 3f; // tid mellem linjer
+
+    [SerializeField] private BossMovement bossMovement;
     
     private PlayerHealth playerHealth;
 
@@ -37,7 +43,7 @@ public class boss_lady_script : MonoBehaviour
     "I do enjoy a good scream. \n" +
     "Now then — shall we dance, sparkle boy?";
 
-    private enum BossState
+    internal enum BossState
     {
         Idle,
         Attack,
@@ -49,9 +55,13 @@ public class boss_lady_script : MonoBehaviour
         Hit,
         Dead
     }
+    
+    private bool isShowingDialog = false;
+    private bool skipDialog = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bossMovement = GetComponent<BossMovement>();
         bossHealth = GetComponent<BossHealth>();
         shooter = GetComponent<BossShooter>();
         GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -91,6 +101,7 @@ public class boss_lady_script : MonoBehaviour
             return;
         }
         // Hvis begge lever, så angrib
+        FacePlayer();
         animator.SetBool("isIdle", false);
         animator.SetBool("isAttacking", true);
         shooter.Shoot();
@@ -112,13 +123,31 @@ public class boss_lady_script : MonoBehaviour
 
     IEnumerator StartSequence()
     {
+        PlayerController2D.Instance.interactable = this;
+        
+        isShowingDialog = true; // dialogen er aktiv
+        skipDialog = false;     // ingen skip endnu
+        
         // Vis dialogtekst
         dialogText.gameObject.SetActive(true);
+        eToskip.gameObject.SetActive(true);
+        bossMovement.enabled = false;
+        
         yield return StartCoroutine(ShowDialogLines(bigText));
         // Skjul dialog
+        yield return new WaitForSeconds(1f);
+        
         dialogText.gameObject.SetActive(false);
+        eToskip.gameObject.SetActive(false);
+
+        isShowingDialog = false;
+        
+        PlayerController2D.Instance.interactable = null; // Tag interaktion væk efter dialogen
+
 
         bossHealth.canTakeDamage = true;
+
+        bossMovement.enabled = true;
         
         // Start angreb
         currentState = BossState.Attack;
@@ -133,9 +162,43 @@ public class boss_lady_script : MonoBehaviour
 
         foreach (string line in lines)
         {
+            if (skipDialog)
+            {
+                // Vis sidste linje
+                string lastLine = lines[lines.Length - 1].Trim();
+                dialogText.text = lastLine;
+                
+                yield return new WaitForSeconds(1f);
+                yield break;
+            }
             dialogText.text = line.Trim();
             yield return new WaitForSeconds(lineDelay);
         }
     }
 
+    void FacePlayer()
+    {
+        if (playerHealth != null)
+        {
+            Vector3 direction = playerHealth.transform.position - transform.position;
+            if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(-7.19446754f,8.0692215f,5.30800009f);
+            }
+            else
+            {
+                transform.localScale = new Vector3(7.19446754f,8.0692215f,5.30800009f);
+            }
+        }
+    }
+
+    public void Interact()
+    {
+        if (isShowingDialog)
+        {
+            skipDialog = true;
+            eToskip.gameObject.SetActive(false);
+            Debug.Log("Dialog skippet");
+        }
+    }
 }

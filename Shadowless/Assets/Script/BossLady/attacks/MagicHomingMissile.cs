@@ -4,6 +4,7 @@ using UnityEngine;
 public class MagicHomingMissile : MonoBehaviour
 {
     public float speedX = 6f;
+    public float direction = 1f; // 1 = højre, -1 = venstre
 
     public float yFollowStrength = 5f;
     public float maxYVelocity = 10f;
@@ -25,6 +26,7 @@ public class MagicHomingMissile : MonoBehaviour
     void OnEnable()
     {
         CancelInvoke(nameof(Disable));
+        ApplyDirection();
     }
     void Start()
     {
@@ -36,25 +38,36 @@ public class MagicHomingMissile : MonoBehaviour
             player = p.transform;
         else
             Debug.LogError("Missile kan ikke finde Player! Tjek at spilleren har tag 'Player'.");
+        
         Destroy(gameObject, lifetime);
+    }
+    
+    public void Initialize(float dir)
+    {
+        direction = dir;
+
+        // Flip missilet baseret på direction
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * direction;
+        transform.localScale = scale;
     }
 
     void FixedUpdate()
     {
-        float vx = speedX;
+        float vx = speedX * direction;
 
-        float vy = rb.velocity.y;
+        float vy = rb.linearVelocity.y;
 
         if (player)
         {
             float yDelta = player.position.y - transform.position.y;
             float targetVy = yDelta * yFollowStrength;
 
-            vy = Mathf.MoveTowards(rb.velocity.y, Mathf.Clamp(targetVy, -maxYVelocity, maxYVelocity),
+            vy = Mathf.MoveTowards(rb.linearVelocity.y, Mathf.Clamp(targetVy, -maxYVelocity, maxYVelocity),
                 yFollowStrength * Time.fixedDeltaTime);
         }
         
-        rb.velocity = new Vector2(vx, vy);
+        rb.linearVelocity = new Vector2(vx, vy);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -80,4 +93,10 @@ public class MagicHomingMissile : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void ApplyDirection()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * Mathf.Sign(direction); // 1 = højre, -1 = venstre
+        transform.localScale = scale;
+    }
 }
