@@ -356,6 +356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2776131814350868148, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: exitPortal
+      value: 
+      objectReference: {fileID: 806954850}
     - target: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_Name
       value: Gorgon (2)
@@ -558,6 +562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2776131814350868148, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: exitPortal
+      value: 
+      objectReference: {fileID: 806954850}
     - target: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_Name
       value: Gorgon (1)
@@ -32682,7 +32690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565487439781689671, guid: f5aa7827cbec19f4d9746358a6bf5664, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.52
+      value: 10.3
       objectReference: {fileID: 0}
     - target: {fileID: 7565487439781689671, guid: f5aa7827cbec19f4d9746358a6bf5664, type: 3}
       propertyPath: m_LocalPosition.y

@@ -2,40 +2,32 @@ using UnityEngine;
 
 public class GorgonManager : MonoBehaviour
 {
-    // 1. Static Instance Field
-    public static GorgonManager Instance { get; private set; } // Accessible by other scripts
+    public static GorgonManager Instance { get; private set; } 
 
-    // Assign the Portal GameObject in the Inspector
     public GameObject exitPortal; 
     
-    // Set this number to the total count of Gorgons (e.g., 3)
     public int totalGorgons = 3; 
     private int gorgonsDefeated = 0;
-
-    void Awake()
+    public void Awake()
     {
-        // 2. Singleton Initialization
+        // 1. Core Singleton Check
         if (Instance != null && Instance != this) 
         { 
-            // Ensures only one manager exists
+            // A duplicate exists. Destroy it immediately.
             Destroy(this.gameObject); 
         } 
         else 
         { 
+            // This is the one and only manager.
             Instance = this; 
-        } 
-        if (exitPortal != null)
-        {
-            exitPortal.SetActive(false);
-        }
-    }
-
-    void Start()
-    {
-        // Ensure the portal is closed at the start of the level
-        if (exitPortal != null)
-        {
-            exitPortal.SetActive(false);
+            
+            // 2. Initial Setup: MUST run only on the official instance.
+            gorgonsDefeated = 0; // Explicitly reset the count for the new scene
+            
+            if (exitPortal != null)
+            {
+                exitPortal.SetActive(false); // Close the portal
+            }
         }
     }
 
@@ -58,5 +50,21 @@ public class GorgonManager : MonoBehaviour
             Debug.Log("[GorgonManager] ALL GORGONS DEFEATED! Opening Exit Portal.");
             exitPortal.SetActive(true);
         }
+    }
+
+    // New Function to reset the state every time the scene loads (or game starts)
+    public void ResetLevelState()
+    {
+        gorgonsDefeated = 0;
+        if (exitPortal != null)
+        {
+            exitPortal.SetActive(false);
+        }
+    }
+
+    // Clean up the static reference when the application quits
+    private void OnApplicationQuit()
+    {
+        Instance = null;
     }
 }

@@ -29,7 +29,6 @@ public class GorgonAI : MonoBehaviour, IDamageable
     private Animator animator;
 
     [Header("System Management")]
-    public GorgonManager manager;
 
     private Flash flashScript;
 
