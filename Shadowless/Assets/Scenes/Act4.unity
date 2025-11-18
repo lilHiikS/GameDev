@@ -33858,6 +33858,22 @@ PrefabInstance:
       propertyPath: exitPortal
       value: 
       objectReference: {fileID: 806954850}
+    - target: {fileID: 3432132426777588398, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: flashColorSelect.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432132426777588398, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: flashColorSelect.b
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432132426777588398, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: flashColorSelect.g
+      value: 0.9607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432132426777588398, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
+      propertyPath: flashColorSelect.r
+      value: 0.9921569
+      objectReference: {fileID: 0}
     - target: {fileID: 7270117698323798625, guid: dd3708f2dc6c74765a2c53cde9229ca1, type: 3}
       propertyPath: m_Name
       value: Gorgon

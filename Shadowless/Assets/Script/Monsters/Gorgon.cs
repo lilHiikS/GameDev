@@ -31,12 +31,15 @@ public class GorgonAI : MonoBehaviour, IDamageable
     [Header("System Management")]
     public GorgonManager manager;
 
+    private Flash flashScript;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         targetPoint = pointA.position;
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        flashScript = GetComponent<Flash>();
     }
 
     void Update() //her - måske fiks så den ik kører 60 gerne per sekund
@@ -134,6 +137,11 @@ public class GorgonAI : MonoBehaviour, IDamageable
         if (isDead) return;
 
         currentHealth -= damage;
+
+        if (flashScript != null)
+        {
+            flashScript.HitFlash(); 
+        }
 
         animator.SetBool("isWalking", false);
         animator.ResetTrigger("attack");
