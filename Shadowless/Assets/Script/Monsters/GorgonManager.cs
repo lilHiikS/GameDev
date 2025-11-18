@@ -24,6 +24,10 @@ public class GorgonManager : MonoBehaviour
         { 
             Instance = this; 
         } 
+        if (exitPortal != null)
+        {
+            exitPortal.SetActive(false);
+        }
     }
 
     void Start()
