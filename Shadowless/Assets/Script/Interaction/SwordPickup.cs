@@ -47,6 +47,13 @@ public class SwordPickup : MonoBehaviour, IInteractable
         if (promptUI != null)
             promptUI.SetActive(false);
         
+        // Trigger sword tutorial
+        SwordTutorial tutorial = FindAnyObjectByType<SwordTutorial>();
+        if (tutorial != null)
+        {
+            tutorial.StartTutorial();
+        }
+        
         // Disable the sword (you can change this to Destroy(gameObject) if you prefer)
         gameObject.SetActive(false);
     }
