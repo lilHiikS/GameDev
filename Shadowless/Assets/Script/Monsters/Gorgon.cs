@@ -153,15 +153,28 @@ public class GorgonAI : MonoBehaviour, IDamageable
         }
     }
 
- private void Die()
+    private void Die()
     {
+        if (isDead) 
+        {
+            Debug.LogWarning($"[Gorgon {gameObject.name}] Die() called but already dead - skipping");
+            return; // Prevent multiple death calls
+        }
+        
         isDead = true;
+        
+        Debug.Log($"[Gorgon {gameObject.name}] Starting death sequence...");
         animator.SetTrigger("dead"); 
 
-        if (GorgonManager.Instance != null)
+        if (GorgonManager.Instance != null) 
         {
+            Debug.Log($"[Gorgon {gameObject.name}] Reporting death to GorgonManager...");
             GorgonManager.Instance.ReportGorgonDefeated(); 
-            Debug.Log("Gorgon reported death successfully."); 
+            Debug.Log($"[Gorgon {gameObject.name}] Death reported successfully."); 
+        }
+        else
+        {
+            Debug.LogError($"[Gorgon {gameObject.name}] GorgonManager.Instance is NULL! Portal may not open. This could be a race condition.");
         }
 
         var col = GetComponent<Collider2D>();

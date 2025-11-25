@@ -10,32 +10,38 @@ public class GorgonManager : MonoBehaviour
     private int gorgonsDefeated = 0;
     public void Awake()
     {
-        // 1. Core Singleton Check
+        Debug.Log($"[GorgonManager] Awake called on {gameObject.name}");
+        
         if (Instance != null && Instance != this) 
         { 
-            // A duplicate exists. Destroy it immediately.
-            Destroy(this.gameObject); 
-        } 
-        else 
-        { 
-            // This is the one and only manager.
-            Instance = this; 
-            
-            // 2. Initial Setup: MUST run only on the official instance.
-            gorgonsDefeated = 0; // Explicitly reset the count for the new scene
-            
-            if (exitPortal != null)
-            {
-                exitPortal.SetActive(false); // Close the portal
-            }
+            Debug.LogWarning($"[GorgonManager] Duplicate found! Destroying {gameObject.name}");
+            Destroy(this.gameObject);
+            return; 
+        }
+        
+        Instance = this; 
+        Debug.Log($"[GorgonManager] Instance set to {gameObject.name}");
+        
+        gorgonsDefeated = 0; 
+        Debug.Log($"[GorgonManager] Reset gorgonsDefeated to 0. Total gorgons expected: {totalGorgons}");
+        
+        if (exitPortal != null)
+        {
+            exitPortal.SetActive(false); 
+            Debug.Log("[GorgonManager] Exit portal deactivated");
         }
     }
 
-    // Public method called by a Gorgon's script when it dies
     public void ReportGorgonDefeated()
     {
+        if (Instance != this)
+        {
+            Debug.LogWarning("[GorgonManager] ReportGorgonDefeated called on inactive instance - ignoring");
+            return;
+        }
+        
         gorgonsDefeated++;
-        Debug.Log($"[GorgonManager] Gorgon defeated. Total defeated: {gorgonsDefeated}");
+        Debug.Log($"[GorgonManager] Gorgon defeated. Total defeated: {gorgonsDefeated}/{totalGorgons}");
 
         if (gorgonsDefeated >= totalGorgons)
         {
@@ -52,7 +58,6 @@ public class GorgonManager : MonoBehaviour
         }
     }
 
-    // New Function to reset the state every time the scene loads (or game starts)
     public void ResetLevelState()
     {
         gorgonsDefeated = 0;
@@ -66,5 +71,15 @@ public class GorgonManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         Instance = null;
+    }
+
+    // Also clean up when this object is destroyed (scene changes, etc.)
+    private void OnDestroy()
+    {
+        // Only clear the static reference if this is the active instance
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 }
