@@ -478,9 +478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 1
   unlitSprite: {fileID: -576015301925156798, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 5036793780387493159, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!212 &258201875
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -723,9 +720,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 1
   unlitSprite: {fileID: 4087262602687119236, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: -3595886946658436706, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!58 &339811302
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -811,6 +805,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &414223427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414223428}
+  m_Layer: 0
+  m_Name: TorchRespawn_Yellow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414223428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414223427}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.9, y: -9.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538187127
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,9 +945,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   torchID: 2
   unlitSprite: {fileID: 4994728430060012801, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 8528209041880299383, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!114 &538187131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32690,11 +32712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565487439781689671, guid: f5aa7827cbec19f4d9746358a6bf5664, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.3
+      value: 38.9
       objectReference: {fileID: 0}
     - target: {fileID: 7565487439781689671, guid: f5aa7827cbec19f4d9746358a6bf5664, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -50.4
+      value: -9.3
       objectReference: {fileID: 0}
     - target: {fileID: 7565487439781689671, guid: f5aa7827cbec19f4d9746358a6bf5664, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32954,9 +32976,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 4
   unlitSprite: {fileID: -4676290749143670003, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 6522722242193578461, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!212 &1054640509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33410,9 +33429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 0
   unlitSprite: {fileID: -576015301925156798, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 5036793780387493159, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!58 &1115456197
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -33642,9 +33658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 2
   unlitSprite: {fileID: 4087262602687119236, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: -3595886946658436706, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!212 &1253866002
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33712,7 +33725,7 @@ Transform:
   m_GameObject: {fileID: 1253865999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.1, y: -23.28, z: 0}
+  m_LocalPosition: {x: 42.19, y: -21.75, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33854,6 +33867,37 @@ RectTransform:
   m_AnchoredPosition: {x: -12159, y: 41644}
   m_SizeDelta: {x: 953.4, y: -535.8}
   m_Pivot: {x: 0.5156231, y: 0.45290923}
+--- !u!1 &1332109445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332109446}
+  m_Layer: 0
+  m_Name: TorchRespawn_Green
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1332109446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332109445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.21, y: -9.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1333912824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34038,9 +34082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Torch
   torchID: 3
   unlitSprite: {fileID: -4676290749143670003, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 6522722242193578461, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!58 &1345871227
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -34253,9 +34294,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   torchID: 3
   unlitSprite: {fileID: 4994728430060012801, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  litSprite: {fileID: 8528209041880299383, guid: 1729d4376e7fa435d8052e06503d1aa5, type: 3}
-  isLit: 0
-  torchManager: {fileID: 1483349276}
 --- !u!114 &1455496396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41569,6 +41607,11 @@ MonoBehaviour:
   crystal: {fileID: 24085961}
   doorMover: {fileID: 1039398873}
   textWrong: {fileID: 1269589566}
+  torchSpawnPoints:
+  - {fileID: 2068556831}
+  - {fileID: 1537241982}
+  - {fileID: 414223428}
+  - {fileID: 1332109446}
 --- !u!4 &1483349277
 Transform:
   m_ObjectHideFlags: 0
@@ -41579,6 +41622,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.83218, y: -49.19057, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1537241981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537241982}
+  m_Layer: 0
+  m_Name: TorchRespawn_Pink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537241982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537241981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.76, y: -9.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41902,6 +41976,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964551325}
   m_CullTransparentMesh: 1
+--- !u!1 &2068556830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068556831}
+  m_Layer: 0
+  m_Name: TorchRespawn_Blue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068556831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068556830}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.57, y: -9.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -41929,3 +42034,7 @@ SceneRoots:
   - {fileID: 1333912824}
   - {fileID: 285455272}
   - {fileID: 191615176}
+  - {fileID: 2068556831}
+  - {fileID: 1537241982}
+  - {fileID: 414223428}
+  - {fileID: 1332109446}

@@ -6,40 +6,84 @@ public class TorchManager : MonoBehaviour
     public Torch[] torches; // drag them in Inspector
     public int[] correctOrder = { 0, 1, 2, 3 }; // Matches the visual order (Blue, Pink, Yellow, Green)
     private int currentStep = 0;
+    private System.Collections.Generic.List<GameObject> placedTorches = new System.Collections.Generic.List<GameObject>();
 
     public GameObject crystal;
     public Mover doorMover; // The script component on the DoorSprite
     public TMP_Text textWrong;
-
-   public void TorchActivated(Torch droppedTorch)
-{
-    Debug.Log($"[TorchManager] Torch {droppedTorch.torchID} dropped. Current step: {currentStep}."); 
-
-    if (droppedTorch.torchID == correctOrder[currentStep])
+    public Transform[] torchSpawnPoints = new Transform[4]; // Array to hold the 4 distinct spawn points
+    public bool TorchActivated(Torch droppedTorch, GameObject droppedTorchObject) // <-- CHANGE RETURN TYPE TO BOOL
     {
-        // SUCCESS!
-        droppedTorch.LightTorch(); // Now we light the torch if it was the correct one
-        currentStep++;
+        Debug.Log($"[TorchManager] Torch {droppedTorch.torchID} dropped. Current step: {currentStep}."); 
 
-        if (currentStep >= correctOrder.Length)
+        if (droppedTorch.torchID == correctOrder[currentStep])
         {
-            PuzzleSolved();
+            // SUCCESS!
+            Debug.Log($"[TorchManager] Correct ID: {droppedTorch.torchID}. Advancing to step {currentStep + 1}.");
+            droppedTorch.LightTorch();
+            currentStep++;
+
+            placedTorches.Add(droppedTorchObject); 
+            
+            if (currentStep >= correctOrder.Length)
+            {
+                PuzzleSolved();
+            }
+            return true;
+        }
+        else
+        {
+            // FAILURE!
+            Debug.Log($"[TorchManager] WRONG ID: {droppedTorch.torchID}. Expected: {correctOrder[currentStep]}. Resetting.");
+            ResetPuzzle();
+            
+            // **CRITICAL CHANGE:**
+            return false; // <-- Tell the target NOT to absorb the torch
         }
     }
-    else
-    {
-        // FAILURE!
-        droppedTorch.gameObject.SetActive(true); 
-        ResetPuzzle();
-    }
-}
+
 
     void ResetPuzzle()
     {
+        Debug.Log("[TorchManager] Resetting Puzzle. All torches unlit.");
         currentStep = 0;
+
+        foreach (GameObject placedTorch in placedTorches)
+        {
+            if (placedTorch != null)
+            {
+                // Get the Torch component to find its ID
+                Torch torchComponent = placedTorch.GetComponent<Torch>();
+
+                if (torchComponent != null && torchComponent.torchID >= 0 && torchComponent.torchID < torchSpawnPoints.Length && torchSpawnPoints[torchComponent.torchID] != null)
+                {
+                    // Use the torch's ID (0, 1, 2, or 3) to select the corresponding Transform
+                    Vector3 spawnPosition = torchSpawnPoints[torchComponent.torchID].position;
+                    
+                    // CRITICAL FIX: Reset position and parent
+                    placedTorch.transform.parent = null; // Detach from player/crystal
+                    placedTorch.transform.position = spawnPosition; // Move to the dedicated spot
+                    
+                    // Re-enable the object
+                    placedTorch.SetActive(true); 
+                    
+                    Debug.Log($"[TorchManager] Restoring consumed torch: {placedTorch.name} (ID: {torchComponent.torchID}) at its dedicated spawn point."); 
+                }
+                else 
+                {
+                    // Fallback (in case the ID is wrong or the spawn point isn't assigned)
+                    placedTorch.SetActive(true);
+                    Debug.LogError($"[TorchManager] Failed to find spawn point for {placedTorch.name} (ID: {torchComponent?.torchID}). Re-enabled at original position.");
+                }
+            }
+        }
+        placedTorches.Clear();
+
+  
         foreach (var t in torches)
         {
             t.ResetTorch();
+            Debug.Log($"[TorchManager] Resetting Torch ID: {t.torchID}. "); 
         }
         
         if (textWrong != null)
