@@ -125,7 +125,11 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+<<<<<<<< HEAD:Shadowless/Assets/Animations/Monsters/Gorgon/gorgon_attack_3.anim
   - time: 0.21666667
+========
+  - time: 0
+>>>>>>>> 2ee2081 (add: animator & state for idle & chase works + prettier):Shadowless/Assets/Animations/Gorgon_1/gorgon_attack_3.anim
     functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}

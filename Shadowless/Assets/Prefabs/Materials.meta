@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Shadowless/Assets/Prefabs/Materials.meta
 guid: 47a3d6320169a4502b7be971bd542d64
 folderAsset: yes
+========
+guid: 6092a7f727ce642279829a724ea9da5b
+>>>>>>>> 2ee2081 (add: animator & state for idle & chase works + prettier):Shadowless/Assets/Scenes/TestLevel.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
