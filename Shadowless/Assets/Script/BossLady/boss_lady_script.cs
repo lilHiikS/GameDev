@@ -80,9 +80,10 @@ public class boss_lady_script : MonoBehaviour, IInteractable
 
     void StartAttackPhase()
     {
-        CancelInvoke(nameof(AttackCycle));
-        InvokeRepeating(nameof(AttackCycle), 0f, 1f);
+        // CancelInvoke(nameof(AttackCycle));
+        // InvokeRepeating(nameof(AttackCycle), 1.5f, 1.5f);
 
+        animator.SetBool("isAttacking", true);
     }
     void AttackCycle()
     {
@@ -101,10 +102,18 @@ public class boss_lady_script : MonoBehaviour, IInteractable
             return;
         }
         // Hvis begge lever, så angrib
-        FacePlayer();
-        animator.SetBool("isIdle", false);
-        animator.SetBool("isAttacking", true);
-        shooter.Shoot();
+        if (currentState == BossState.Attack)
+        {
+            FacePlayer();
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isAttacking", true);
+            shooter.Shoot();
+        }
+        else
+        {
+            animator.SetBool("isAttacking", false);
+        }
+
     }
 
     void Idle()
@@ -176,7 +185,7 @@ public class boss_lady_script : MonoBehaviour, IInteractable
         }
     }
 
-    void FacePlayer()
+    internal void FacePlayer()
     {
         if (playerHealth != null)
         {

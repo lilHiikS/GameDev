@@ -367,6 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Script.BossLady.attacks.BossShooter
   missilePrefab: {fileID: 56790006931026136, guid: f1fc56d59c947eff1a5d476d9e7bda35, type: 3}
   missileSpawn: {fileID: 265502165}
+  projectileSpeed: 10
 --- !u!114 &108388161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 265502164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.293, y: 0.088, z: -0}
+  m_LocalPosition: {x: 0.569, y: 0.104, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

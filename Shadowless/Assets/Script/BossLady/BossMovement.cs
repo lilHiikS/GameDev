@@ -12,9 +12,11 @@ namespace Script.BossLady
         public LineRenderer teleportLine; // assign a LineRenderer prefab in Inspector
         public Animator animator;
         public boss_lady_script bossLadyScript;
+        private Rigidbody2D rb2D;
 
         void Start()
         {
+            rb2D = GetComponent<Rigidbody2D>();
             if (bossLadyScript == null)
                 bossLadyScript = GetComponent<boss_lady_script>();
             if(animator == null)
@@ -35,6 +37,11 @@ namespace Script.BossLady
 
                 if (moveType == 0)
                 {
+                    if (rb2D != null)
+                    {
+                        rb2D.gravityScale = 0;
+                    }
+                    bossLadyScript.currentState = boss_lady_script.BossState.Run;
                     // TELEPORT med rød linje
                     if (teleportLine != null)
                     {
@@ -57,6 +64,12 @@ namespace Script.BossLady
                     }
 
                     transform.position = target.position;
+                    
+                    bossLadyScript.currentState = boss_lady_script.BossState.Attack;
+                    if (bossLadyScript != null)
+                    {
+                        bossLadyScript.FacePlayer();
+                    }
 
                     if (teleportLine != null)
                     {
@@ -68,6 +81,10 @@ namespace Script.BossLady
                 {
                     // LØB
                     bossLadyScript.currentState = boss_lady_script.BossState.Run;
+                    if (rb2D != null)
+                    {
+                        rb2D.gravityScale = 0;
+                    }
                     if(animator != null)
                     {
                         animator.SetBool("isIdle", false);
@@ -85,6 +102,10 @@ namespace Script.BossLady
                     }
                     // Når hun er nået frem:
                     bossLadyScript.currentState = boss_lady_script.BossState.Attack;
+                    if (bossLadyScript != null)
+                    {
+                        bossLadyScript.FacePlayer();
+                    }
                     if(animator != null)
                     {
                         animator.SetBool("isRunning", false);
