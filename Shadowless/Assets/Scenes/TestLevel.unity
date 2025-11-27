@@ -397,10 +397,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a72f36afa01074990bc2b49f265307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
-  doorId: 1
-  spawnPoint: {fileID: 1794311732}
-  targetDoorId: 2
-  icon: {fileID: 2083074810}
+  customSpawnPoint: {fileID: 0}
+  sceneToLoad: {fileID: 0}
+  lightSource: {fileID: 0}
+  romanNumber: {fileID: 0}
+  act: 0
+  interactionSound: {fileID: 0}
 --- !u!1 &161887696
 GameObject:
   m_ObjectHideFlags: 0
@@ -18566,6 +18568,7 @@ MonoBehaviour:
     m_Bits: 192
   playerRb: {fileID: 1689209980}
   grabSpeed: 15
+  grabSound: {fileID: 0}
   hoveredObject: {fileID: 0}
 --- !u!114 &1689209982
 MonoBehaviour:
@@ -18587,6 +18590,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 136
   animator: {fileID: 1689209977}
+  UI: {fileID: 0}
+  footstepSource: {fileID: 0}
+  jumpSource: {fileID: 0}
+  health: {fileID: 0}
+  playerAttack: {fileID: 0}
 --- !u!1001 &1715275042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31943,9 +31951,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3eba4b4296d1b4baa1b7efed36fb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneManager
-  scenes: []
-  doorInteractables: []
+  startScene: {fileID: 0}
   transitionAnimator: {fileID: 335130382}
+  portalSpawnIn: {x: 0, y: 0, z: 0}
+  cameraConfiner: {fileID: 0}
+  player: {fileID: 0}
+  storyProgression: 0
+  portalPrefab: {fileID: 0}
 --- !u!1001 &1821083567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36239,6 +36251,9 @@ MonoBehaviour:
   pot: {fileID: 612825387}
   spitting: {fileID: 0}
   waitingForIngredient: 0
+  spitPostDelay: 2
+  spitPreDelay: 0.2
+  exitPortal: {fileID: 0}
 --- !u!61 &1973664688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36680,10 +36695,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a72f36afa01074990bc2b49f265307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
-  doorId: 2
-  spawnPoint: {fileID: 1923526678}
-  targetDoorId: 1
-  icon: {fileID: 0}
+  customSpawnPoint: {fileID: 0}
+  sceneToLoad: {fileID: 0}
+  lightSource: {fileID: 0}
+  romanNumber: {fileID: 0}
+  act: 0
+  interactionSound: {fileID: 0}
 --- !u!61 &2137876995
 BoxCollider2D:
   m_ObjectHideFlags: 0
