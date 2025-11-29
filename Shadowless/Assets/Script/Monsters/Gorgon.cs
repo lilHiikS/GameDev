@@ -31,24 +31,48 @@ public class GorgonAI : MonoBehaviour, IDamageable
     [Header("System Management")]
 
     private Flash flashScript;
+    private Knockback knockbackScript;
+    private Rigidbody2D rb; 
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
         targetPoint = pointA.position;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>(); 
         currentHealth = maxHealth;
         flashScript = GetComponent<Flash>();
+        knockbackScript = GetComponent<Knockback>();
+        
+        if (rb != null)
+        {
+            rb.freezeRotation = true; 
+            rb.gravityScale = 0f; 
+            rb.bodyType = RigidbodyType2D.Dynamic; 
+            
+            Debug.Log($"[Gorgon {gameObject.name}] Rigidbody2D configured: bodyType={rb.bodyType}, gravityScale={rb.gravityScale}");
+        }
+        
+        Vector3 currentPos = transform.position;
+        transform.position = new Vector3(currentPos.x, -51.5f, currentPos.z); 
+        
+        Debug.Log($"[Gorgon {gameObject.name}] Positioned at {transform.position}");
     }
 
     void Update() //her - måske fiks så den ik kører 60 gerne per sekund
     {
         if (isDead) return;
+        
+        // Debug.Log($"[Gorgon {gameObject.name}] State: {currentState}, Player in detection range: {PlayerInRange(detectionRange)}, Player position: {(player ? player.position.ToString() : "NULL")}");
+        
         switch (currentState)
         {
             case GorgonState.Idle:
                 if (PlayerInRange(detectionRange))
+                {
+                    Debug.Log($"[Gorgon {gameObject.name}] Switching to Chase state");
                     currentState = GorgonState.Chase;
+                }
                 break;
 
             case GorgonState.Chase:
@@ -56,7 +80,7 @@ public class GorgonAI : MonoBehaviour, IDamageable
                 if (PlayerInRange(attackRange))
                     currentState = GorgonState.Attack;
                 else if (!PlayerInRange(detectionRange))
-                    currentState = GorgonState.Chase;
+                    currentState = GorgonState.Idle; 
                 break;
 
             case GorgonState.Attack:
@@ -81,49 +105,55 @@ public class GorgonAI : MonoBehaviour, IDamageable
         animator.SetBool("isIdle", true);
     }
 
-    void ChasePlayer()
+  void ChasePlayer()
+{
+    if (player == null) return;
+
+    // Stop if knocked back
+    if (knockbackScript != null && knockbackScript.isKnockedBack)
     {
-        if (player == null)
-            return;
-
-        animator.SetBool("isWalking", true);
-
-
-        var newPosition = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        transform.position = new Vector2(newPosition.x, transform.position.y);
-
-        if ((player.position.x < transform.position.x && transform.localScale.x > 0) ||
-            (player.position.x > transform.position.x && transform.localScale.x < 0))
-        {
-            Flip();
-        }
+        animator.SetBool("isWalking", false);
+        return;
     }
+
+    animator.SetBool("isWalking", true);
+
+    Vector2 direction = (player.position - transform.position).normalized;
+
+    // Horizontal only
+    float horizontal = direction.x * speed;
+
+    rb.linearVelocity = new Vector2(horizontal, rb.linearVelocity.y);
+
+    // Flip
+    if ((horizontal < 0 && transform.localScale.x > 0) ||
+        (horizontal > 0 && transform.localScale.x < 0))
+    {
+        Flip();
+    }
+}
 
     void AttackPlayer()
     {
-        // Check if we can attack (cooldown)
         if (Time.time - lastAttackTime < attackCooldown)
             return;
 
         animator.SetTrigger("attack");
 
-        // Deal damage to player if in range
         if (PlayerInRange(attackRange) && player != null)
         {
-            // Try to get PlayerHealth component
             if (player.TryGetComponent<PlayerHealth>(out var playerHealth))
             {
                 playerHealth.TakeDamage(attackDamage);
             }
 
-            // Optional: Apply knockback to player if desired
             var pc = player.GetComponent<PlayerController2D>();
             if (pc != null)
             {
                 float dir = Mathf.Sign(player.position.x - transform.position.x);
                 if (dir == 0f) dir = 1f;
 
-                Vector2 knockback = new Vector2(dir * 5f, 0f); // tweak force as needed
+                Vector2 knockback = new Vector2(dir * 5f, 0f); 
                 pc.ApplyKnockback(knockback);
             }
 
@@ -142,10 +172,20 @@ public class GorgonAI : MonoBehaviour, IDamageable
             flashScript.HitFlash(); 
         }
 
+        if (knockbackScript != null && player != null)
+        {
+            float horizontalDirection = Mathf.Sign(transform.position.x - player.position.x);
+            if (horizontalDirection == 0f) horizontalDirection = 1f; 
+            
+            Vector2 knockbackDirection = new Vector2(horizontalDirection, 0f);
+            
+            knockbackScript.ApplyKnockback(knockbackDirection);
+        }
+
         animator.SetBool("isWalking", false);
         animator.ResetTrigger("attack");
 
-        animator.SetTrigger("hurt"); // play hurt animation if available
+        animator.SetTrigger("hurt"); 
 
         if (currentHealth <= 0)
         {
@@ -158,7 +198,7 @@ public class GorgonAI : MonoBehaviour, IDamageable
         if (isDead) 
         {
             Debug.LogWarning($"[Gorgon {gameObject.name}] Die() called but already dead - skipping");
-            return; // Prevent multiple death calls
+            return; 
         }
         
         isDead = true;
