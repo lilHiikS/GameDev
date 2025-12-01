@@ -4,9 +4,9 @@ public class GorgonAI : MonoBehaviour, IDamageable
 {
     public float speed = 2f;
     public float detectionRange = 20f;
-    public float attackRange = 1f;
+    public float attackRange = 1.5f;
     public int attackDamage = 1;
-    public float attackCooldown = 1f;
+    public float attackCooldown = 0.3f;
     public Transform pointA;
     public Transform pointB;
     public Transform player;
@@ -14,6 +14,8 @@ public class GorgonAI : MonoBehaviour, IDamageable
     public LayerMask groundLayer;
     private Vector3 targetPoint;
     private float lastAttackTime = 0f;
+
+    public float knockbackForce = 6f;
 
     [Header("Health Settings")]
     public int maxHealth = 3;
@@ -62,9 +64,7 @@ public class GorgonAI : MonoBehaviour, IDamageable
     void Update() //her - måske fiks så den ik kører 60 gerne per sekund
     {
         if (isDead) return;
-        
-        // Debug.Log($"[Gorgon {gameObject.name}] State: {currentState}, Player in detection range: {PlayerInRange(detectionRange)}, Player position: {(player ? player.position.ToString() : "NULL")}");
-        
+                
         switch (currentState)
         {
             case GorgonState.Idle:
@@ -78,7 +78,10 @@ public class GorgonAI : MonoBehaviour, IDamageable
             case GorgonState.Chase:
                 ChasePlayer();
                 if (PlayerInRange(attackRange))
+                {
+                    Debug.Log($"[Gorgon {gameObject.name}] Player in attack range - switching to Attack state");
                     currentState = GorgonState.Attack;
+                }
                 else if (!PlayerInRange(detectionRange))
                     currentState = GorgonState.Idle; 
                 break;
@@ -86,7 +89,10 @@ public class GorgonAI : MonoBehaviour, IDamageable
             case GorgonState.Attack:
                 AttackPlayer();
                 if (!PlayerInRange(attackRange))
+                {
+                    Debug.Log($"[Gorgon {gameObject.name}] Player out of attack range - switching to Chase state");
                     currentState = GorgonState.Chase;
+                }
                 break;
         }
     }
@@ -109,7 +115,6 @@ public class GorgonAI : MonoBehaviour, IDamageable
 {
     if (player == null) return;
 
-    // Stop if knocked back
     if (knockbackScript != null && knockbackScript.isKnockedBack)
     {
         animator.SetBool("isWalking", false);
@@ -120,12 +125,10 @@ public class GorgonAI : MonoBehaviour, IDamageable
 
     Vector2 direction = (player.position - transform.position).normalized;
 
-    // Horizontal only
     float horizontal = direction.x * speed;
 
     rb.linearVelocity = new Vector2(horizontal, rb.linearVelocity.y);
 
-    // Flip
     if ((horizontal < 0 && transform.localScale.x > 0) ||
         (horizontal > 0 && transform.localScale.x < 0))
     {
@@ -137,9 +140,17 @@ public class GorgonAI : MonoBehaviour, IDamageable
     {
         if (Time.time - lastAttackTime < attackCooldown)
             return;
-
+            
+        Debug.Log($"[Gorgon {gameObject.name}] Executing attack!");
         animator.SetTrigger("attack");
+        
+        DealDamage();
+        
+        lastAttackTime = Time.time;
+    }
 
+    public void DealDamage()
+    {
         if (PlayerInRange(attackRange) && player != null)
         {
             if (player.TryGetComponent<PlayerHealth>(out var playerHealth))
@@ -156,8 +167,6 @@ public class GorgonAI : MonoBehaviour, IDamageable
                 Vector2 knockback = new Vector2(dir * 5f, 0f); 
                 pc.ApplyKnockback(knockback);
             }
-
-            lastAttackTime = Time.time;
         }
     }
 
@@ -233,7 +242,16 @@ public class GorgonAI : MonoBehaviour, IDamageable
 
     bool PlayerInRange(float range)
     {
-        var inRange = player != null && Vector2.Distance(transform.position, player.position) <= range;
+        if (player == null) return false;
+        
+        float distance = Vector2.Distance(transform.position, player.position);
+        bool inRange = distance <= (range + 0.2f);
+        
+        if (range == attackRange)
+        {
+            Debug.Log($"[Gorgon {gameObject.name}] Player distance: {distance:F2}, Attack range: {range + 0.2f:F2} (base {range}), In range: {inRange}");
+        }
+        
         return inRange;
     }
 
