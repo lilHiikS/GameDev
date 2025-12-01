@@ -84,8 +84,7 @@ public class Grabbing : MonoBehaviour
                     grabbedRb = grabbedObject.GetComponent<Rigidbody2D>();
                     grabbedCollider = hit.collider;
 
-                    originalLayer = grabbedObject.gameObject.layer;
-                    grabbedObject.gameObject.layer = LayerMask.NameToLayer("Default");
+                    grabbedRb.excludeLayers = LayerMask.GetMask("Player");
 
                     if (grabbedCollider != null && playerCollider != null)
                     {
@@ -106,7 +105,7 @@ public class Grabbing : MonoBehaviour
             {
                 Physics2D.IgnoreCollision(grabbedCollider, playerCollider, false);
 
-                grabbedObject.gameObject.layer = originalLayer;
+                grabbedRb.excludeLayers = 0;
 
                 grabbedCollider = null;
                 grabbedObject = null;
