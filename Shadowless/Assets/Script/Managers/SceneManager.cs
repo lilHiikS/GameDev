@@ -69,7 +69,7 @@ public class SceneManager : MonoBehaviour
 
     public void Retry()
     {
-        StartCoroutine(RetryTransitionAndLoadScene(startScene));
+        StartCoroutine(RetryTransitionAndLoadCurrentScene());
     }
 
     public void TransitionToPortalScene(SceneAsset sceneToLoad, Vector3? customSpawnPoint = null)
@@ -88,7 +88,7 @@ public class SceneManager : MonoBehaviour
         storyProgression = progression;
     }
 
-    private IEnumerator RetryTransitionAndLoadScene(SceneAsset sceneAsset)
+    private IEnumerator RetryTransitionAndLoadCurrentScene()
     {
         var playerHealth = player.GetComponent<PlayerHealth>();
         playerHealth.ReviveStats();
@@ -105,7 +105,9 @@ public class SceneManager : MonoBehaviour
         transitionAnimator.ResetTrigger("Death");
         transitionAnimator.SetBool("Transition", true);
         transitionAnimator.Play("Fade_In");
-        LoadScene(sceneAsset);
+
+        var activeSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(activeSceneName);
     }
 
     private IEnumerator TransitionAndLoadScene(SceneAsset sceneAsset)
