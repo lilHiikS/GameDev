@@ -32,16 +32,6 @@ public class PlayerAttack : MonoBehaviour
         if (!hasWeapon) return;
         if (isAttacking) return;
 
-        if (canCombo)
-        {
-            Debug.Log("Combo Attack!");
-            isAttacking = true;
-            canCombo = false;
-            comboTimer = 0f;
-            animator.SetTrigger("AttackCombo");
-            return;
-        }
-
         if (attackTimer < timeBetweenAttacks) return;
 
         isAttacking = true;
