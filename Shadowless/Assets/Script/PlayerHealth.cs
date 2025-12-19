@@ -12,6 +12,10 @@ public class PlayerHealth : MonoBehaviour
     public Sprite heart;
     public Sprite emptyHeart;
 
+    [Header("Audio")]
+  [SerializeField] private AudioSource deathSound;
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -53,6 +57,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        if (deathSound != null)
+        {
+            deathSound.Play();
+        }
+
         animator.SetTrigger("Die");
     }
 

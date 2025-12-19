@@ -23,4 +23,12 @@ public class AnimEventHandler : MonoBehaviour
     {
         playerAttack.canCombo = true;
     }
+
+    public void PlaySwingSound()
+{
+    if (playerAttack != null)
+    {
+        playerAttack.PlaySwingSound();
+    }
+}
 }

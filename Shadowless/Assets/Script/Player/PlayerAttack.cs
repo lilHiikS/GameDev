@@ -22,6 +22,10 @@ public class PlayerAttack : MonoBehaviour
 
     private RaycastHit2D[] hits;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip swingSound;
+
     void Start()
     {
         attackTimer = timeBetweenAttacks;
@@ -39,6 +43,15 @@ public class PlayerAttack : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
+    // Denne kaldes af en animation event
+    public void PlaySwingSound()
+    {
+        if (audioSource != null && swingSound != null)
+        {
+            audioSource.PlayOneShot(swingSound);
+        }
+    }
+
     public void PerformAttack()
     {
         hits = Physics2D.CircleCastAll(attackTransform.position, attackRange, Vector2.zero, 0f, attackableLayer);
@@ -49,7 +62,8 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (hit.collider.gameObject.TryGetComponent<IDamageable>(out var damageable))
                 {
-                    damageable.TakeDamage(attackDamage); // Deal specified attack damage
+                    damageable.TakeDamage(attackDamage);
+
                 }
             }
         }
